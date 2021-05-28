@@ -34,7 +34,7 @@ const MyTitaCecilia = () => {
     threshold: 0,
   });
 
-  const [sixthSectionRef, sixthSectionInView] = useInView({
+  /* const [sixthSectionRef, sixthSectionInView] = useInView({
     threshold: 0,
   });
 
@@ -44,7 +44,7 @@ const MyTitaCecilia = () => {
 
   const [eighthSectionRef, eighthSectionInView] = useInView({
     threshold: 0,
-  });
+  }); */
 
   const [bgWidth, setBgWidth] = React.useState(0);
   const [bgLoaded, setBgLoaded] = React.useState(false);
@@ -75,22 +75,22 @@ const MyTitaCecilia = () => {
       setCurrentSection(3);
     } else if (fifthSectionInView) {
       setCurrentSection(4);
-    } else if (sixthSectionInView) {
+    } /* else if (sixthSectionInView) {
       setCurrentSection(5);
     } else if (seventhSectionInView) {
       setCurrentSection(6);
     } else if (eighthSectionInView) {
       setCurrentSection(7);
-    }
+    } */
   }, [
     firstSectionInView,
     secondSectionInView,
     thirdSectionInView,
     fourthSectionInView,
     fifthSectionInView,
-    sixthSectionInView,
+    /* sixthSectionInView,
     seventhSectionInView,
-    eighthSectionInView
+    eighthSectionInView */
   ])
 
   return (
