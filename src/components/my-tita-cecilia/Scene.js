@@ -1,23 +1,41 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
+import { useTransition, animated } from 'react-spring';
 
 const Scene = ({ children, night }) => {
+  const [index, set] = React.useState(night);
+  const transitions = useTransition(index, {
+    key: `scene-${index ? 'night' : 'day'}`,
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+    config: { duration: 500 },
+  });
+
+  React.useEffect(() => {
+    set(night);
+  }, [night]);
+
   return (
-    <>
-      <Box
-        position="fixed"
-        w="100vw"
-        h="100vh"
-        bgImage={`/assets/my-tita-cecilia/${night ? 'bg_night.png' : 'bg.png'}`}
-        bgSize="contain"
-        bgPos="center"
-        bgRepeat="no-repeat"
-        bgColor="black"
-        zIndex="-1"
-      >
-        { children }
-      </Box>
-    </>
+    <div>
+      { transitions((style, i) => (
+        <animated.div
+          style={{
+            ...style,
+            position: 'fixed',
+            width: '100vw',
+            height: '100vh',
+            backgroundImage: `url(/assets/my-tita-cecilia/${i ? 'bg_night.png' : 'bg.png'})`,
+            backgroundSize: 'contain',
+            backgroundPosition: 'center',
+            backgroundColor: 'black',
+            backgroundRepeat: 'no-repeat',
+            zIndex: '-1',
+          }}
+        >
+          { children }
+        </animated.div>
+      )) }
+    </div>
   );
 }
 export default Scene;
