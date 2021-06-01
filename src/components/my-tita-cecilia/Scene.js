@@ -27,6 +27,7 @@ const Scene = ({ children, night }) => {
             backgroundImage: `url(/assets/my-tita-cecilia/${i ? 'bg_night.png' : 'bg.png'})`,
             backgroundSize: 'contain',
             backgroundPosition: 'center',
+            backgroundAttachment: 'fixed',
             backgroundColor: 'black',
             backgroundRepeat: 'no-repeat',
             zIndex: '-1',

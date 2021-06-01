@@ -1,10 +1,12 @@
 import React from 'react';
 
-import { Text } from '@chakra-ui/react';
+import { Text, Spinner, Center } from '@chakra-ui/react';
 
 import { useInView } from 'react-intersection-observer';
 
 import useCurrentWidth from '../utils/useCurrentWidth';
+
+import preloadImages from '../utils/preloadImages';
 
 import Scene from '../components/my-tita-cecilia/Scene';
 import Cecilia from '../components/my-tita-cecilia/Cecilia';
@@ -53,6 +55,29 @@ const MyTitaCecilia = () => {
 
   const [currentSection, setCurrentSection] = React.useState(0);
 
+  const [assetsLoaded, setAssetsLoaded] = React.useState(false);
+
+  React.useEffect(() => {
+    const BASEURL = '/assets/my-tita-cecilia';
+    const IMAGES = [
+      `${BASEURL}/bg_night.png`,
+      `${BASEURL}/bg.png`,
+      `${BASEURL}/elem_1.png`,
+      `${BASEURL}/elem_2.png`,
+      `${BASEURL}/elem_3.png`,
+      `${BASEURL}/elem_4.png`,
+      `${BASEURL}/elem_5.png`,
+      `${BASEURL}/elem_6.png`,
+      `${BASEURL}/elem_7_night.png`,
+      `${BASEURL}/elem_7.png`,
+      `${BASEURL}/elem_8_night.png`,
+      `${BASEURL}/elem_8.png`,
+    ];
+    Promise.all(IMAGES.map(image => preloadImages(image)))
+      .then(() => setAssetsLoaded(true))
+      .catch(err => console.log("Failed to load images", err))
+  }, [])
+
   const margin = React.useMemo(() => {
     return (width - bgWidth) / 2;
   }, [width, bgWidth]);
@@ -92,6 +117,20 @@ const MyTitaCecilia = () => {
     seventhSectionInView,
     eighthSectionInView */
   ])
+
+  if (!assetsLoaded) {
+    return (
+      <Center w="100vw" h="100vh" bgColor="black">
+        <Spinner
+          thickness="4px"
+          speed="0.65s"
+          emptyColor="gray.200"
+          color="blue.500"
+          size="xl"
+        />
+      </Center>
+    )
+  }
 
   return (
     <>

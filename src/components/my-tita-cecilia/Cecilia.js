@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Center } from '@chakra-ui/react';
 import { useTransition, animated } from 'react-spring';
 
+
 const images = [
   'elem_1',
   'elem_2',
@@ -28,7 +29,7 @@ const Cecilia = React.forwardRef(({ version, onLoad, selected }, ref) => {
 
   return (
     <Box
-      w="100%"
+      w="100vw"
       h="100vh"
     >
       <Center h="100%" style={{

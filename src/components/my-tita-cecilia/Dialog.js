@@ -6,12 +6,16 @@ const Dialog = ({ children, margin, onMouseEnter, onMouseLeave, left }) => {
   const BaseBox = () => (
     <Box
       marginTop="1rem"
-      w="30%"
+      w="40%"
       color="white"
-      bgColor="blackAlpha.800"
-      borderRadius="1rem"
-      padding="3rem"
+      bgImage={`linear-gradient(to ${left ? 'left' : 'right'}, 
+        rgba(0,0,0, 0), 
+        rgba(0,0,0, 1) 60%)`}
+      fontSize="clamp(0.5rem, -0.875rem + 4vw, 1rem)"
+      padding="2rem"
       transition="0.2s"
+      textAlign={`${left ? 'left' : 'right'}`}
+      textShadow="3px 3px 3px #000000"
       _hover={{
         filter: 'drop-shadow(5px 5px 5px #000000)'
       }}
@@ -28,13 +32,11 @@ const Dialog = ({ children, margin, onMouseEnter, onMouseLeave, left }) => {
         <>
           <Spacer />
           <BaseBox />
-          <Box w="3vw" />
           <Box w={margin} />
         </>
       ) : (
         <>
           <Box w={margin} />
-          <Box w="3vw" />
           <BaseBox />
         </>
       ) }
