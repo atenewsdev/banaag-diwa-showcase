@@ -1,8 +1,8 @@
 import React from 'react';
 import { useTransition, animated } from 'react-spring';
 
-const Scene = ({ children, night }) => {
-  const [index, set] = React.useState(night);
+const Scene = ({ children, night, darken }) => {
+  const [index, set] = React.useState(night || false);
   const transitions = useTransition(index, {
     key: `scene-${index ? 'night' : 'day'}`,
     from: { opacity: 0 },
@@ -33,7 +33,9 @@ const Scene = ({ children, night }) => {
             zIndex: '-1',
           }}
         >
-          { children }
+          <div style={{ backgroundColor: darken ? 'rgba(0, 0, 0, 0.6)' : '' }}>
+            { children }
+          </div>
         </animated.div>
       )) }
     </div>

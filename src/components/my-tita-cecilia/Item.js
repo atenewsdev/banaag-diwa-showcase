@@ -8,12 +8,15 @@ const images = [
   'elem_2',
   'elem_3',
   'elem_4',
+  'elem_5',
   'elem_6',
   'elem_7',
-  'elem_8'
+  'elem_8',
+  'elem_7_night',
+  'elem_8_night'
 ]
 
-const Cecilia = React.forwardRef(({ version, onLoad, selected }, ref) => {
+const Item = React.forwardRef(({ version, onLoad, selected }, ref) => {
   const [index, set] = React.useState(version);
   const transitions = useTransition(index, {
     key: index,
@@ -55,4 +58,4 @@ const Cecilia = React.forwardRef(({ version, onLoad, selected }, ref) => {
   );
 });
 
-export default Cecilia;
+export default Item;
