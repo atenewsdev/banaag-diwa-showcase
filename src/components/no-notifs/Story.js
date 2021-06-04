@@ -44,7 +44,7 @@ const MyTitaCecilia = () => {
     threshold: 0,
   });
 
-  const [bgLoaded, setBgLoaded] = React.useState(false);
+  // const [bgLoaded, setBgLoaded] = React.useState(false);
 
   const [currentSection, setCurrentSection] = React.useState(0);
 
@@ -81,6 +81,10 @@ const MyTitaCecilia = () => {
     eighthSectionInView,
     nightInView
   ])
+
+  React.useEffect(() => {
+    console.log(currentSection);
+  }, [currentSection]);
 
   return (
     <>
