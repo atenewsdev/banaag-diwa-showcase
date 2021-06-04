@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Spinner, Center } from '@chakra-ui/react';
+import { Spinner, Center, Fade } from '@chakra-ui/react';
 
 import preloadImages from '../utils/preloadImages';
 
@@ -14,6 +14,7 @@ const MyTitaCecilia = () => {
   React.useEffect(() => {
     const BASEURL = '/assets/my-tita-cecilia';
     const IMAGES = [
+      `/assets/titles/my tita cecilia.png`,
       `${BASEURL}/bg_night.png`,
       `${BASEURL}/bg.png`,
       `${BASEURL}/elem_1.png`,
@@ -47,11 +48,17 @@ const MyTitaCecilia = () => {
   }
 
   if (!started) {
-    return <TitleScreen onStart={() => setStarted(true)} />;
+    return (
+      <Fade in={assetsLoaded}>
+        <TitleScreen onStart={() => setStarted(true)} />
+      </Fade>
+    );
   }
 
   return (
-    <Story />
+    <Fade in={started}>
+      <Story />
+    </Fade>
   );
 }
 export default MyTitaCecilia;

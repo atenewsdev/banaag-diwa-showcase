@@ -7,6 +7,7 @@ import {
 
 import Home from './pages/home';
 import MyTitaCecilia from "./pages/my-tita-cecilia";
+import NoNotifs from './pages/no-notifs';
 
 const App = () => {
   return (
@@ -14,6 +15,9 @@ const App = () => {
       <Switch>
         <Route path="/my-tita-cecilia">
           <MyTitaCecilia />
+        </Route>
+        <Route path="/no-notifs">
+          <NoNotifs />
         </Route>
         <Route path="/">
           <Home />
