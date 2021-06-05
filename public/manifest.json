@@ -1,25 +1,32 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+    "theme_color": "#233342",
+    "background_color": "#000000",
+    "display": "browser",
+    "scope": "/",
+    "start_url": "/",
+    "name": "Banaag Diwa - Atenews",
+    "short_name": "Banaag Diwa",
+    "description": "Banaag Diwa, the official literary folio of Atenews, calls on the growing literary and photography community of Ateneo de Davao University to examine, capture, and reveal the concentric factors that have plagued our humanity since and have now enabled the tragedy of this pandemic. Writers and photographers are invited to take part this year\u2019s Banaag Diwa: Pandemya.",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
 }
