@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Helmet } from 'react-helmet';
 import { Spinner, Center, Fade } from '@chakra-ui/react';
 
 import preloadImages from '../utils/preloadImages';
@@ -7,6 +7,26 @@ import preloadSounds from '../utils/preloadSounds';
 
 import Story from '../components/no-notifs/Story';
 import TitleScreen from '../components/no-notifs/TitleScreen';
+
+const Header = () => (
+  <Helmet>
+    <title>No Notifications, No Signal, Full Battery, 10:05 PM by Harvey Spence Kentilitisca | Banaag Diwa</title>
+    <meta name="title" content="No Notifications, No Signal, Full Battery, 10:05 PM by Harvey Spence Kentilitisca | Banaag Diwa" />
+    <meta name="description" content="Harvey Spence Kentilitisca is a third-year psychology student at Ateneo de Davao University with no political affiliations inside and outside of the university. He was born and raised in Bukidnon where the setting and the struggles of this story were greatly inspired. He is acquainted  with campus journalism during his high school years and considers writing feature articles as his forte." />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://banaag-diwa.atenews.ph/no-notifs" />
+    <meta property="og:title" content="No Notifications, No Signal, Full Battery, 10:05 PM by Harvey Spence Kentilitisca | Banaag Diwa" />
+    <meta property="og:description" content="Harvey Spence Kentilitisca is a third-year psychology student at Ateneo de Davao University with no political affiliations inside and outside of the university. He was born and raised in Bukidnon where the setting and the struggles of this story were greatly inspired. He is acquainted  with campus journalism during his high school years and considers writing feature articles as his forte." />
+    <meta property="og:image" content="/assets/no-notifs/scene01.jpg" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://banaag-diwa.atenews.ph/no-notifs" />
+    <meta property="twitter:title" content="No Notifications, No Signal, Full Battery, 10:05 PM by Harvey Spence Kentilitisca | Banaag Diwa" />
+    <meta property="twitter:description" content="Harvey Spence Kentilitisca is a third-year psychology student at Ateneo de Davao University with no political affiliations inside and outside of the university. He was born and raised in Bukidnon where the setting and the struggles of this story were greatly inspired. He is acquainted  with campus journalism during his high school years and considers writing feature articles as his forte." />
+    <meta property="twitter:image" content="/assets/no-notifs/scene01.jpg" />
+  </Helmet>
+);
 
 const NoNotifs = () => {
   const [assetsLoaded, setAssetsLoaded] = React.useState(false);
@@ -59,30 +79,39 @@ const NoNotifs = () => {
 
   if (!assetsLoaded) {
     return (
-      <Center w="100vw" h="100vh" bgColor="black">
-        <Spinner
-          thickness="4px"
-          speed="0.65s"
-          emptyColor="gray.200"
-          color="blue.500"
-          size="xl"
-        />
-      </Center>
+      <>
+        <Header />
+        <Center w="100vw" h="100vh" bgColor="black">
+          <Spinner
+            thickness="4px"
+            speed="0.65s"
+            emptyColor="gray.200"
+            color="blue.500"
+            size="xl"
+          />
+        </Center>
+      </>
     )
   }
 
   if (!started) {
     return (
-      <Fade in={assetsLoaded}>
-        <TitleScreen onStart={() => setStarted(true)} />
-      </Fade>
+      <>
+        <Header />
+        <Fade in={assetsLoaded}>
+          <TitleScreen onStart={() => setStarted(true)} />
+        </Fade>
+      </>
     );
   }
 
   return (
-    <Fade in={started}>
-      <Story sfx={loadedSfx} />
-    </Fade>
+    <>
+      <Header />
+      <Fade in={started}>
+        <Story sfx={loadedSfx} />
+      </Fade>
+    </>
   );
 }
 export default NoNotifs;
