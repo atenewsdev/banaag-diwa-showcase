@@ -19,20 +19,22 @@ const Scene = ({ section }) => {
     <div>
       { transitions((style, i) => {
         if (i === 0) {
-          <animated.div
-            style={{
-              ...style,
-              position: 'fixed',
-              width: '100vw',
-              height: '100vh',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundAttachment: 'fixed',
-              backgroundColor: 'black',
-              backgroundRepeat: 'no-repeat',
-              zIndex: '-1',
-            }}
-          />
+          return (
+            <animated.div
+              style={{
+                ...style,
+                position: 'fixed',
+                width: '100vw',
+                height: '100vh',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundAttachment: 'fixed',
+                backgroundColor: 'black',
+                backgroundRepeat: 'no-repeat',
+                zIndex: '-1',
+              }}
+            />
+          );
         }
         return (
           <animated.div

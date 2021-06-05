@@ -19,9 +19,8 @@ const NoNotifs = () => {
       `/assets/titles/low batt_edited.gif`,
       `${BASEURL}/scene01.jpg`,
       `${BASEURL}/scene02.jpg`,
-      `${BASEURL}/scene03_b.jpg`,
-      `${BASEURL}/scene04_a.jpg`,
-      `${BASEURL}/scene04_b.jpg`,
+      `${BASEURL}/scene03.jpg`,
+      `${BASEURL}/scene04.jpg`,
       `${BASEURL}/scene05.jpg`,
       `${BASEURL}/scene06.jpg`,
       `${BASEURL}/scene07.jpg`,
@@ -29,7 +28,8 @@ const NoNotifs = () => {
       `${BASEURL}/scene09.jpg`,
       `${BASEURL}/scene10.jpg`,
       `${BASEURL}/scene11.jpg`,
-      `${BASEURL}/scene12.jpg`
+      `${BASEURL}/scene12.jpg`,
+      `${BASEURL}/scene13.jpg`
     ];
 
     const SOUNDS = [
