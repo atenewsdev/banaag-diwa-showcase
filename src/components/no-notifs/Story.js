@@ -70,10 +70,11 @@ const NoNotifs = ({ sfx }) => {
   React.useEffect(() => {
     const playSfx = (index, loop) => {
       sfx.forEach((sound, i) => {
-        if (loop) {
-          sound.loop = true;
-        }
+        sound.loop = false;
         if (i === index) {
+          if (loop) {
+            sound.loop = true;
+          }
           sound.play();
         } else {
           sound.pause();
