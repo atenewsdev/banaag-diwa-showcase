@@ -28,8 +28,9 @@ const Item = React.forwardRef(({ version, onLoad, selected }, ref) => {
 
   React.useEffect(() => {
     set(version);
-  }, [version]);
-
+    onLoad();
+  }, [version, onLoad]);
+  // 
   return (
     <Box
       w="100vw"
@@ -39,18 +40,20 @@ const Item = React.forwardRef(({ version, onLoad, selected }, ref) => {
         position: 'relative'
       }}>
         { transitions((style, i) => (
-          <animated.img
-            src={`/assets/my-tita-cecilia/${images[i]}.png`}
-            alt="Tita Cecilia"
+          <animated.div
             ref={ref}
             style={{
               ...style,
               position: 'absolute',
               filter: `${selected ? 'drop-shadow(5px 5px 5px #222222)' : '' }`,
-              maxHeight: '100%',
-              maxWidth: '100%'
+              backgroundImage: `url(/assets/my-tita-cecilia/${images[i]}.png)`,
+              backgroundSize: 'contain',
+              backgroundPosition: 'center',
+              backgroundAttachment: 'fixed',
+              backgroundRepeat: 'no-repeat',
+              height: '100vh',
+              width: '100vw'
             }}
-            onLoad={onLoad}
           />
         )) }
       </Center>
