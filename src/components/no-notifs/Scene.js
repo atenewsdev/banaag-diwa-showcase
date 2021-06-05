@@ -1,8 +1,8 @@
 import React from 'react';
 import { useTransition, animated } from 'react-spring';
 
-const Scene = ({ children, night, darken }) => {
-  const [index, set] = React.useState(night || false);
+const Scene = ({ section }) => {
+  const [index, set] = React.useState(section);
   const transitions = useTransition(index, {
     key: `scene-${index ? 'night' : 'day'}`,
     from: { opacity: 0 },
@@ -12,32 +12,46 @@ const Scene = ({ children, night, darken }) => {
   });
 
   React.useEffect(() => {
-    set(night);
-  }, [night]);
+    set(section);
+  }, [section]);
 
   return (
     <div>
-      { transitions((style, i) => (
-        <animated.div
-          style={{
-            ...style,
-            position: 'fixed',
-            width: '100vw',
-            height: '100vh',
-            backgroundImage: `url(/assets/my-tita-cecilia/${i ? 'bg_night.png' : 'bg.png'})`,
-            backgroundSize: 'contain',
-            backgroundPosition: 'center',
-            backgroundAttachment: 'fixed',
-            backgroundColor: 'black',
-            backgroundRepeat: 'no-repeat',
-            zIndex: '-1',
-          }}
-        >
-          <div style={{ backgroundColor: darken ? 'rgba(0, 0, 0, 0.6)' : '' }}>
-            { children }
-          </div>
-        </animated.div>
-      )) }
+      { transitions((style, i) => {
+        if (i === 0) {
+          <animated.div
+            style={{
+              ...style,
+              position: 'fixed',
+              width: '100vw',
+              height: '100vh',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundAttachment: 'fixed',
+              backgroundColor: 'black',
+              backgroundRepeat: 'no-repeat',
+              zIndex: '-1',
+            }}
+          />
+        }
+        return (
+          <animated.div
+            style={{
+              ...style,
+              position: 'fixed',
+              width: '100vw',
+              height: '100vh',
+              backgroundImage: `url(/assets/no-notifs/scene${i > 9 ? i : `0${i}`}.jpg)`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundAttachment: 'fixed',
+              backgroundColor: 'black',
+              backgroundRepeat: 'no-repeat',
+              zIndex: '-1',
+            }}
+          />
+        );
+      }) }
     </div>
   );
 }

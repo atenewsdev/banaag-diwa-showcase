@@ -44,8 +44,6 @@ const MyTitaCecilia = () => {
     threshold: 0,
   });
 
-  // const [bgLoaded, setBgLoaded] = React.useState(false);
-
   const [currentSection, setCurrentSection] = React.useState(0);
 
   React.useEffect(() => {
@@ -82,14 +80,10 @@ const MyTitaCecilia = () => {
     nightInView
   ])
 
-  React.useEffect(() => {
-    console.log(currentSection);
-  }, [currentSection]);
-
   return (
     <>
       <Scene
-        night={nightInView}
+        section={currentSection}
       />
       <div ref={firstSectionRef}>
         <Dialog>
