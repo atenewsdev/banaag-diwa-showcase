@@ -4,11 +4,11 @@ import { useTransition, animated } from 'react-spring';
 const Scene = ({ section }) => {
   const [index, set] = React.useState(section);
   const transitions = useTransition(index, {
-    key: `scene-${index ? 'night' : 'day'}`,
+    key: `scene-${index}`,
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
-    config: { duration: 500 },
+    config: { duration: 200 },
   });
 
   React.useEffect(() => {

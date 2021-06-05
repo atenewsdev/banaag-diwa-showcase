@@ -12,6 +12,8 @@ const NoNotifs = () => {
   const [assetsLoaded, setAssetsLoaded] = React.useState(false);
   const [started, setStarted] = React.useState(false);
 
+  const [loadedSfx, setLoadedSfx] = React.useState([]);
+
   React.useEffect(() => {
     const BASEURL = '/assets/no-notifs';
     const IMAGES = [
@@ -40,12 +42,18 @@ const NoNotifs = () => {
       `${BASEURL}/sfx/scene08.mp3`,
       `${BASEURL}/sfx/scene10.mp3`,
     ];
-
     Promise.all([
-      ...IMAGES.map(image => preloadImages(image)),
-      ...SOUNDS.map(sound => preloadSounds(sound))
+      Promise.all([
+        ...IMAGES.map(image => preloadImages(image))
+      ]),
+      Promise.all([
+        ...SOUNDS.map(sound => preloadSounds(sound))
+      ])
     ])
-      .then(() => setAssetsLoaded(true))
+      .then((res) => {
+        setAssetsLoaded(true);
+        setLoadedSfx(res[1]);
+      })
       .catch(err => console.log("Failed to load assets", err))
   }, [])
 
@@ -73,7 +81,7 @@ const NoNotifs = () => {
 
   return (
     <Fade in={started}>
-      <Story />
+      <Story sfx={loadedSfx} />
     </Fade>
   );
 }
