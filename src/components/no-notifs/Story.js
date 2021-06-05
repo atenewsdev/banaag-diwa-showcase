@@ -96,10 +96,10 @@ const NoNotifs = ({ sfx }) => {
       setCurrentSection(2);
     } else if (fourthSectionInView) {
       setCurrentSection(3);
-      playSfx(1);
+      playSfx(1, true);
     } else if (fifthSectionInView) {
       setCurrentSection(4);
-      playSfx(1);
+      playSfx(1, true);
     } else if (sixthSectionInView) {
       setCurrentSection(5);
       playSfx(2);
@@ -107,7 +107,7 @@ const NoNotifs = ({ sfx }) => {
       setCurrentSection(6);
     } else if (eighthSectionInView) {
       setCurrentSection(7);
-      playSfx(3);
+      playSfx(3, true);
     } else if (ninthSectionInView) {
       setCurrentSection(8);
     } else if (tenthSectionInView) {
