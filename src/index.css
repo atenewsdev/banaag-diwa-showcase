@@ -1,0 +1,6 @@
+@font-face { font-family: PublicoText; src: url('./fonts/PublicoText-Roman.otf'); } 
+@font-face { font-family: PublicoText; font-weight: bold; src: url('./fonts/PublicoText-Bold.otf');}
+
+body {
+  overflow-x: hidden;
+}
