@@ -15,7 +15,7 @@ const Apathy = () => {
       paddingBottom="30vh"
     >
       <Center h="100vh">
-        <Image src="/assets/titles/on apathy.png" />
+        <Image src="/assets/titles/on apathy.png" maxW="70vw" />
       </Center>
       <Center>
         <Text>

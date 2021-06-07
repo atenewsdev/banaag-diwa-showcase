@@ -15,7 +15,7 @@ const RedChild = () => {
       paddingBottom="30vh"
     >
       <Center h="100vh">
-        <Image src="/assets/titles/red child.png" />
+        <Image src="/assets/titles/red child.png" maxW="70vw" />
       </Center>
       <Center>
         <Text>

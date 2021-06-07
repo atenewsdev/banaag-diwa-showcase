@@ -15,7 +15,7 @@ const TheVisitor = () => {
       paddingBottom="30vh"
     >
       <Center h="100vh">
-        <Image src="/assets/titles/the visitor.png" />
+        <Image src="/assets/titles/the visitor.png" maxW="70vw" />
       </Center>
       <Center>
         <Text>
