@@ -3,6 +3,7 @@ import React from 'react';
 import { Box, SimpleGrid, Flex, Image, Text, Center, VStack, chakra } from '@chakra-ui/react';
 
 import ConceptImage from '../components/home/ConceptImage';
+import Card from '../components/home/Card';
 
 const Home = () => {
   return (
@@ -24,7 +25,7 @@ const Home = () => {
           <Box fontFamily="PublicoText" color="#FFFFFF">
             <Center h="100%" w="100%">
               <VStack spacing="2rem">
-                <Text letterSpacing="clamp(0.5rem, 1vw, 2rem)" fontSize="clamp(3rem, 3vw, 5rem)" lineHeight="1rem">P<chakra.span fontSize="clamp(2.4rem, 2.4vw, 4rem)" >ANDEMYA</chakra.span></Text>
+                <Text letterSpacing="clamp(0.5rem, 1vw, 2rem)" fontSize="clamp(3rem, 5vw, 5rem)" lineHeight="1rem">P<chakra.span fontSize="clamp(2.4rem, 4vw, 4rem)" >ANDEMYA</chakra.span></Text>
                 <Text fontFamily="Lato" fontSize="1rem">SHORT STORIES   ·   POEMS</Text>
               </VStack>
             </Center>
@@ -49,18 +50,22 @@ const Home = () => {
         <Text fontFamily="PublicoText" color="#E7B089" letterSpacing="1rem" fontSize="2rem">P<chakra.span fontSize="1.6rem" >OEMS</chakra.span></Text>
 
         <Box color="white" fontFamily="Lato" marginTop="3rem">
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ornare lorem massa. Eget ipsum sed in leo netus. Quam placerat ut accumsan, arcu. Vulputate sed tincidunt vel non neque a diam sed.
-          </Text>
+          <SimpleGrid columns={[1, 1, 1, 3]} spacing={10}>
+            <Card src="/assets/poems/apathy.gif" title="Apathy" award="honorable" titleSrc="/assets/titles/on apathy.png" />
+            <Card src="/assets/poems/red-child.gif" title="Red Child" award="honorable" titleSrc="/assets/titles/red child.png" />
+            <Card src="/assets/poems/the-visitor.gif" title="The Visitor" award="honorable" titleSrc="/assets/titles/the visitor.png" />
+            <Card src="/assets/poems/the-visitor.gif" title="The Visitor" award="special" />
+          </SimpleGrid>
         </Box>
       </Box>
       <Box w="100%" marginTop="5rem" paddingLeft="clamp(3rem, 8vw, 10rem)" paddingRight="clamp(3rem, 8vw, 10rem)">
         <Text fontFamily="PublicoText" color="#E7B089" letterSpacing="1rem" fontSize="2rem">S<chakra.span fontSize="1.6rem" >HORT STORIES</chakra.span></Text>
 
         <Box color="white" fontFamily="Lato" marginTop="3rem">
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ornare lorem massa. Eget ipsum sed in leo netus. Quam placerat ut accumsan, arcu. Vulputate sed tincidunt vel non neque a diam sed.
-          </Text>
+          <SimpleGrid columns={1} spacing={10}>
+            <Card src="/assets/my-tita-cecilia/bg.png" title="My Tita Cecilia" award="first" titleSrc="/assets/titles/my tita cecilia.png" />
+            <Card src="/assets/no-notifs/scene01.jpg" title="No Notifs" award="second" titleSrc="/assets/titles/no notifs.png" maxWidth="clamp(15rem, 40vw, 40rem)" />
+          </SimpleGrid>
         </Box>
       </Box>
       <Box w="100%" h="20vh" />

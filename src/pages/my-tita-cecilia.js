@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Spinner, Center, Fade } from '@chakra-ui/react';
+import { Spinner, Center, Fade, Text } from '@chakra-ui/react';
 
 import preloadImages from '../utils/preloadImages';
 
@@ -31,6 +31,9 @@ const MyTitaCecilia = () => {
   const [assetsLoaded, setAssetsLoaded] = React.useState(false);
   const [started, setStarted] = React.useState(false);
 
+  const isLandscape = () => window.matchMedia('(orientation:landscape)').matches;
+  const [orientation, setOrientation] = React.useState(isLandscape() ? 'landscape' : 'portrait');
+
   React.useEffect(() => {
     const BASEURL = '/assets/my-tita-cecilia';
     const IMAGES = [
@@ -51,6 +54,20 @@ const MyTitaCecilia = () => {
     Promise.all(IMAGES.map(image => preloadImages(image)))
       .then(() => setAssetsLoaded(true))
       .catch(err => console.log("Failed to load images", err))
+
+    const onWindowResize = () => {              
+      clearTimeout(window.resizeLag)
+      window.resizeLag = setTimeout(() => {
+        delete window.resizeLag                       
+        setOrientation(isLandscape() ? 'landscape' : 'portrait')
+      }, 200)
+    }
+    
+    return (
+      onWindowResize(),
+      window.addEventListener('resize', onWindowResize),
+      () => window.removeEventListener('resize', onWindowResize)
+    );
   }, [])
 
   if (!assetsLoaded) {
@@ -65,6 +82,17 @@ const MyTitaCecilia = () => {
             color="blue.500"
             size="xl"
           />
+        </Center>
+      </>
+    )
+  }
+
+  if (orientation !== 'landscape') {
+    return (
+      <>
+        <Header />
+        <Center w="100vw" h="100vh" bgColor="black">
+          <Text color="white">Switch to landscape mode to continue...</Text>
         </Center>
       </>
     )
