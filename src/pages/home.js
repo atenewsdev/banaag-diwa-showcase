@@ -180,6 +180,12 @@ const Home = () => {
               maxWidth="clamp(15rem, 40vw, 40rem)" 
               onClick={() => history.push('/no-notifs')}
             />
+            <Card
+              src="/assets/my-familys-barber/bg.gif"
+              title="My Family's Barber"
+              award="honorable"
+              onClick={() => history.push('/')}
+            />
           </SimpleGrid>
           <SimpleGrid columns={[1, 1, 1, 3]} spacing={10}>
             <Card 

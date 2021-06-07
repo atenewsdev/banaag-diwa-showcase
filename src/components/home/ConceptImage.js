@@ -18,12 +18,10 @@ const ConceptImage = () => {
     config: { duration: 200 },
   });
 
-  let interval = null;
-
   React.useEffect(() => {
-    clearInterval(interval);
+    let interval = null;
 
-    setInterval(function(){
+    interval = setInterval(function(){
       set((prev) => {
         if (prev === 0) {
           return 1;
@@ -31,7 +29,11 @@ const ConceptImage = () => {
         return 0;
       });
     }, 5000);
-  }, [interval])
+
+    return () => {
+      clearInterval(interval);
+    }
+  }, [])
 
   return (
     <chakra.div position="relative" flex="1" maxWidth="100vw" minHeight="70vh">
