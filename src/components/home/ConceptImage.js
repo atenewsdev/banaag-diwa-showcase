@@ -34,7 +34,7 @@ const ConceptImage = () => {
   }, [interval])
 
   return (
-    <chakra.div position="relative" flex="1" height="70vh">
+    <chakra.div position="relative" flex="1" maxWidth="100vw" minHeight="70vh">
       { transitions((style, i) => (
         <animated.div
           style={{
