@@ -184,6 +184,7 @@ const Home = () => {
               src="/assets/my-familys-barber/bg.gif"
               title="My Family's Barber"
               award="honorable"
+              titleSrc="/assets/titles/my familys barber.png"
               onClick={() => history.push('/')}
             />
           </SimpleGrid>
