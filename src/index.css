@@ -5,3 +5,11 @@ body {
   overflow-x: hidden;
 }
 
+.switch-wrapper {
+  position: relative;
+}
+
+.switch-wrapper > div {
+  position: absolute;
+}
+

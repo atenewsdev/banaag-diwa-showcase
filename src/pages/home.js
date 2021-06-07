@@ -2,10 +2,14 @@ import React from 'react';
 
 import { Box, SimpleGrid, Flex, Image, Text, Center, VStack, chakra } from '@chakra-ui/react';
 
+import { useHistory } from "react-router-dom";
+
 import ConceptImage from '../components/home/ConceptImage';
 import Card from '../components/home/Card';
 
 const Home = () => {
+  const history = useHistory();
+
   return (
     <chakra.div backgroundColor="#233342" padding={0} margin={0} minW="100vw">
       <Box minH="100vh" w="100%" padding={0} margin={0}>
@@ -51,10 +55,33 @@ const Home = () => {
 
         <Box color="white" fontFamily="Lato" marginTop="3rem">
           <SimpleGrid columns={[1, 1, 1, 3]} spacing={10}>
-            <Card src="/assets/poems/apathy.gif" title="Apathy" award="honorable" titleSrc="/assets/titles/on apathy.png" />
-            <Card src="/assets/poems/red-child.gif" title="Red Child" award="honorable" titleSrc="/assets/titles/red child.png" />
-            <Card src="/assets/poems/the-visitor.gif" title="The Visitor" award="honorable" titleSrc="/assets/titles/the visitor.png" />
-            <Card src="/assets/poems/the-visitor.gif" title="The Visitor" award="special" />
+            <Card 
+              src="/assets/poems/apathy.gif"
+              title="Apathy"
+              award="honorable"
+              titleSrc="/assets/titles/on apathy.png"
+              onClick={() => history.push('/')}
+            />
+            <Card
+              src="/assets/poems/red-child.gif"
+              title="Red Child"
+              award="honorable"
+              titleSrc="/assets/titles/red child.png"
+              onClick={() => history.push('/')}
+            />
+            <Card
+              src="/assets/poems/the-visitor.gif"
+              title="The Visitor"
+              award="honorable"
+              titleSrc="/assets/titles/the visitor.png" 
+              onClick={() => history.push('/')}
+            />
+            <Card
+              src="/assets/poems/the-visitor.gif"
+              title="The Visitor"
+              award="special" 
+              onClick={() => history.push('/')}
+            />
           </SimpleGrid>
         </Box>
       </Box>
@@ -63,8 +90,21 @@ const Home = () => {
 
         <Box color="white" fontFamily="Lato" marginTop="3rem">
           <SimpleGrid columns={1} spacing={10}>
-            <Card src="/assets/my-tita-cecilia/bg.png" title="My Tita Cecilia" award="first" titleSrc="/assets/titles/my tita cecilia.png" />
-            <Card src="/assets/no-notifs/scene01.jpg" title="No Notifs" award="second" titleSrc="/assets/titles/no notifs.png" maxWidth="clamp(15rem, 40vw, 40rem)" />
+            <Card
+              src="/assets/my-tita-cecilia/bg.png"
+              title="My Tita Cecilia"
+              award="first"
+              titleSrc="/assets/titles/my tita cecilia.png"
+              onClick={() => history.push('/my-tita-cecilia')}
+            />
+            <Card
+              src="/assets/no-notifs/scene01.jpg"
+              title="No Notifs"
+              award="second"
+              titleSrc="/assets/titles/no notifs.png"
+              maxWidth="clamp(15rem, 40vw, 40rem)" 
+              onClick={() => history.push('/no-notifs')}
+            />
           </SimpleGrid>
         </Box>
       </Box>

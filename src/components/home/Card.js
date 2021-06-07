@@ -10,10 +10,10 @@ const awards = {
   special: '/assets/rosettes/special prize rosette chip.png'
 }
 
-export default function MediaCard({ src, title, href, award, titleSrc, maxWidth }) {
+export default function MediaCard({ src, title, href, award, titleSrc, maxWidth, onClick }) {
   return (
     <Card style={{ position: 'relative' }}>
-      <CardActionArea href={href}>
+      <CardActionArea href={href} onClick={onClick}>
         { award ? (
           <img src={awards[award]} alt="Award" style={{
             position: 'absolute',
