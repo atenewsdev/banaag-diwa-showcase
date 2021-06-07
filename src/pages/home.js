@@ -198,7 +198,7 @@ const Home = () => {
               onClick={() => history.push('/')}
             />
             <Card 
-              title="Elevator aGirl"
+              title="Elevator Girl"
               author="Jean Sin"
               onClick={() => history.push('/')}
             />
