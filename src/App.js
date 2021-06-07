@@ -5,13 +5,19 @@ import {
 } from "react-router-dom";
 import { AnimatedSwitch } from 'react-router-transition';
 
+import ScrollToTop from './utils/ScrollToTop';
+
 import Home from './pages/home';
 import MyTitaCecilia from "./pages/my-tita-cecilia";
 import NoNotifs from './pages/no-notifs';
+import Apathy from './pages/apathy';
+import RedChild from './pages/red-child';
+import TheVisitor from './pages/the-visitor';
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <AnimatedSwitch
         atEnter={{ opacity: 0 }}
         atLeave={{ opacity: 0 }}
@@ -23,6 +29,15 @@ const App = () => {
         </Route>
         <Route path="/no-notifs">
           <NoNotifs />
+        </Route>
+        <Route path="/apathy">
+          <Apathy />
+        </Route>
+        <Route path="/red-child">
+          <RedChild />
+        </Route>
+        <Route path="/the-visitor">
+          <TheVisitor />
         </Route>
         <Route path="/">
           <Home />

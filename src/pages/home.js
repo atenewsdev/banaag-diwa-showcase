@@ -60,21 +60,21 @@ const Home = () => {
               title="Apathy"
               award="honorable"
               titleSrc="/assets/titles/on apathy.png"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/apathy')}
             />
             <Card
               src="/assets/poems/red-child.gif"
               title="Red Child"
               award="honorable"
               titleSrc="/assets/titles/red child.png"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/red-child')}
             />
             <Card
               src="/assets/poems/the-visitor.gif"
               title="The Visitor"
               award="honorable"
               titleSrc="/assets/titles/the visitor.png" 
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/the-visitor')}
             />
             <Card
               src="/assets/poems/the-visitor.gif"
