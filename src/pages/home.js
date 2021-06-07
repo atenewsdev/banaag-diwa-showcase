@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <chakra.div backgroundColor="#233342" padding={0} margin={0} minW="100vw">
-      <Box minH="100vh" w="100%" padding={0} margin={0}>
+      <Box minH="100vh" w="100%" padding={0} marginBottom="3rem">
         <Box padding="3rem" marginBottom="5rem">
           <Flex>
             <Center>
