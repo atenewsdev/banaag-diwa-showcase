@@ -126,6 +126,12 @@ const NoNotifs = ({ sfx }) => {
     } else if (fourteenthSectionInView) {
       setCurrentSection(13);
     }
+
+    return () => {
+      sfx.forEach((sound) => {
+        sound.pause();
+      });
+    }
   }, [
     firstSectionInView,
     secondSectionInView,
