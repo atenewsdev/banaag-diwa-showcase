@@ -77,8 +77,8 @@ const Home = () => {
               onClick={() => history.push('/the-visitor')}
             />
             <Card
-              src="/assets/poems/the-visitor.gif"
-              title="The Visitor"
+              src="/assets/poems/pahungaw.jpg"
+              title="Pahungaw"
               award="special" 
               onClick={() => history.push('/')}
             />
