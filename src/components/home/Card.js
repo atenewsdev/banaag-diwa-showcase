@@ -4,10 +4,10 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 
 const awards = {
-  honorable: '/assets/rosettes/honorable mention rosette + chip.png',
-  first: '/assets/rosettes/1st place rosette + chip.png',
-  second: '/assets/rosettes/2nd place rosette + chip.png',
-  special: '/assets/rosettes/special prize rosette + chip.png'
+  honorable: '/assets/rosettes/honorable mention rosette chip.png',
+  first: '/assets/rosettes/1st place rosette chip.png',
+  second: '/assets/rosettes/2nd place rosette chip.png',
+  special: '/assets/rosettes/special prize rosette chip.png'
 }
 
 export default function MediaCard({ src, title, href, award, titleSrc, maxWidth }) {
