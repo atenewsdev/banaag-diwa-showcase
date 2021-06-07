@@ -82,6 +82,81 @@ const Home = () => {
               award="special" 
               onClick={() => history.push('/')}
             />
+            <Card
+              title="Lying; Lazy Day; Man, Look Out"
+              author="Franky Arrocena"
+              onClick={() => history.push('/')}
+            />
+            <Card
+              title="Grace of Pandemya"
+              author="Marie Anne Bernal"
+              onClick={() => history.push('/')}
+            />
+            <Card
+              title="Daily Routine; The Domino Effect; Unrest"
+              author="Frances Dane Delfin"
+              onClick={() => history.push('/')}
+            />
+            <Card
+              title="Pandemic Confession; Everything Could Get Worse; Unsafe/Unsettling; Invariant"
+              author="Chiarah Gulle"
+              onClick={() => history.push('/')}
+            />
+            <Card
+              title="A Tabula Rasa; Beginning of Sorrows; I Wish it's Au Revoir and Not Goodbye!; Metamorphosis"
+              author="Jose Ronnie Malayo Jr."
+              onClick={() => history.push('/')}
+            />
+            <Card
+              title="&#x201C; Simula o katapusan &#x201C;; Dilim; &#x201C;Paano siya, Paano Ka, Paano Sila &#x201C;"
+              author="Ahman Lee Miranda"
+              onClick={() => history.push('/')}
+            />
+            <Card
+              title="Death of a Daydreamer; Poison Marked Love; Relapse; Passing"
+              author="Ronald Jay Ortiz"
+              onClick={() => history.push('/')}
+            />
+            <Card
+              title="Pasyal"
+              author="Mark Renz Perez"
+              onClick={() => history.push('/')}
+            />
+            <Card
+              title="Hibernation; Self-isolation; In Budapest I made it rain flowers; I can finally write a poem"
+              author="Ian Salvaña"
+              onClick={() => history.push('/')}
+            />
+            <Card
+              title="“PANDEMYA”"
+              author="Von Marx Secang "
+              onClick={() => history.push('/')}
+            />
+            <Card
+              title="9 MONTHS IN LIMBO"
+              author="Daniel Carlos Tan"
+              onClick={() => history.push('/')}
+            />
+            <Card
+              title="Lockdown; Protocol; Resilient; Kagaya ng Dati"
+              author="Miguel Angelo Francesco Toledo"
+              onClick={() => history.push('/')}
+            />
+            <Card
+              title="Memories (2020)"
+              author="Percival Cyber Vargas"
+              onClick={() => history.push('/')}
+            />
+            <Card
+              title="“Mahal Kong Juan dela Cruz”; “Hangga’t may mga Oportunista”; Alpabetong Pilipino"
+              author="Praise Varian"
+              onClick={() => history.push('/')}
+            />
+            <Card
+              title="The demise of our Paradise?"
+              author="Wilson Angelo Wang"
+              onClick={() => history.push('/')}
+            />
           </SimpleGrid>
         </Box>
       </Box>
@@ -89,7 +164,7 @@ const Home = () => {
         <Text fontFamily="PublicoText" color="#E7B089" letterSpacing="1rem" fontSize="2rem">S<chakra.span fontSize="1.6rem" >HORT STORIES</chakra.span></Text>
 
         <Box color="white" fontFamily="Lato" marginTop="3rem">
-          <SimpleGrid columns={1} spacing={10}>
+          <SimpleGrid columns={1} spacing={10} marginBottom={10}>
             <Card
               src="/assets/my-tita-cecilia/bg.png"
               title="My Tita Cecilia"
@@ -104,6 +179,48 @@ const Home = () => {
               titleSrc="/assets/titles/no notifs.png"
               maxWidth="clamp(15rem, 40vw, 40rem)" 
               onClick={() => history.push('/no-notifs')}
+            />
+          </SimpleGrid>
+          <SimpleGrid columns={[1, 1, 1, 3]} spacing={10}>
+            <Card 
+              title="“Mahal”"
+              author="Ronalyn Arangale"
+              onClick={() => history.push('/')}
+            />
+            <Card 
+              title="A Remnant of War"
+              author="Mae Antonnette Balili"
+              onClick={() => history.push('/')}
+            />
+            <Card 
+              title="A Problem of Bees"
+              author="Jean Sin"
+              onClick={() => history.push('/')}
+            />
+            <Card 
+              title="Elevator aGirl"
+              author="Jean Sin"
+              onClick={() => history.push('/')}
+            />
+            <Card 
+              title="PANdummyC: A not so typical short love story of a dummy account during pandemic"
+              author="dKt3k"
+              onClick={() => history.push('/')}
+            />
+            <Card 
+              title="THE WHITE BUILDING"
+              author="Sean Anthony Penn Lacorte"
+              onClick={() => history.push('/')}
+            />
+            <Card 
+              title="“LIHAM NG PAGHAYO” "
+              author="Ahman Lee Miranda"
+              onClick={() => history.push('/')}
+            />
+            <Card 
+              title="Ang Paboritong Halakhak ng Payasong Hilaw"
+              author="Lea Kate M. Tambis"
+              onClick={() => history.push('/')}
             />
           </SimpleGrid>
         </Box>

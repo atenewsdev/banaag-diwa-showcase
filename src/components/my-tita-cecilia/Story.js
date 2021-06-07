@@ -590,6 +590,14 @@ const MyTitaCecilia = () => {
             And we were back to the usual silence. 
             </Text>
           </Dialog>
+          
+          <div style={{ marginTop: '100vh', marginBottom: '10rem' }}>
+            <Dialog>
+              <Text>
+                Chaz Oyao is a 1st year AB Economics student at Ateneo de Davao University. A member of the Dadiangas  Writers Association in Gensan, he has organized creative writing workshops back in his high school days.  He is currently the Associate Editor of The Dragon Post: The Official Newsletter of the Social Sciences Cluster.
+              </Text>
+            </Dialog>
+          </div>
         </div>
       </Fade>
     </>

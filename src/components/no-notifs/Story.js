@@ -288,6 +288,11 @@ const NoNotifs = ({ sfx }) => {
         What a comical life I wish will end. 
         </Text>
       </Dialog>
+      <Dialog last>
+        <Text marginBottom="1rem">
+          Harvey Spence Kentilitisca is a third-year psychology student at Ateneo de Davao University with no political affiliations inside and outside of the university. He was born and raised in Bukidnon where the setting and the struggles of this story were greatly inspired. He is acquainted  with campus journalism during his high school years and considers writing feature articles as his forte.
+        </Text>
+      </Dialog>
     </>
   );
 }

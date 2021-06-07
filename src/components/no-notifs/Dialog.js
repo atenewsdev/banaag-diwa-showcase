@@ -1,10 +1,10 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
 
-const Dialog = React.forwardRef(({ children, margin, onMouseEnter, onMouseLeave }, ref) => {
+const Dialog = React.forwardRef(({ children, last, onMouseEnter, onMouseLeave }, ref) => {
 
   return (
-    <Box marginBottom="100vh">
+    <Box marginBottom={last ? "20vh" : "100vh"}>
       <Box
         w="40%"
         color="white"
