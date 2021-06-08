@@ -96,6 +96,7 @@ const Home = () => {
             <Card
               src="/assets/poems/pahungaw.jpg"
               title="Pahungaw"
+              titleSrc="/assets/titles/pahungaw.png" 
               award="special" 
               onClick={() => history.push('/')}
             />
