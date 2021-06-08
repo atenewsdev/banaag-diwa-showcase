@@ -13,10 +13,10 @@ const awards = {
   special: '/assets/rosettes/special prize rosette chip.png'
 }
 
-export default function MediaCard({ src, title, author, href, award, titleSrc, maxWidth, onClick }) {
+export default function MediaCard({ src, title, author, href, award, titleSrc, maxWidth, onClick, style }) {
   if (src) {
     return (
-      <Card style={{ position: 'relative', backgroundColor: '#233342', borderColor: '#E7B089' }}>
+      <Card style={{ position: 'relative', backgroundColor: '#233342', borderColor: '#E7B089', ...style }}>
         <CardActionArea href={href} onClick={onClick}>
           { award ? (
             <img src={awards[award]} alt="Award" style={{
@@ -53,13 +53,13 @@ export default function MediaCard({ src, title, author, href, award, titleSrc, m
   }
 
   return (
-    <Card style={{ position: 'relative', backgroundColor: '#233342', borderColor: '#E7B089' }} variant="outlined">
+    <Card style={{ position: 'relative', backgroundColor: '#233342', borderColor: '#E7B089', ...style }} variant="outlined">
       <CardActionArea href={href} onClick={onClick}>
-        <CardContent style={{ height: 400, width: '100%' }}>
+        <CardContent style={{ height: 200, width: '100%' }}>
           <Center h="100%">
             <VStack>
-              <Text color="white" fontFamily="Lato" fontWeight="bold" fontSize="1.5rem" textAlign="center">{title}</Text>
-              <Text color="#E7B089" fontFamily="Lato" fontStyle="italic" fontSize="1rem" textAlign="center">{author}</Text>
+              <Text color="white" fontFamily="Lato" fontWeight="bold" fontSize="1rem" textAlign="center">{title}</Text>
+              <Text color="#E7B089" fontFamily="Lato" fontStyle="italic" fontSize="0.8rem" textAlign="center">{author}</Text>
             </VStack>
           </Center>
         </CardContent>

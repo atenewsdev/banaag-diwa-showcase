@@ -54,34 +54,53 @@ const Home = () => {
         <Text fontFamily="PublicoText" color="#E7B089" letterSpacing="1rem" fontSize="2rem">P<chakra.span fontSize="1.6rem" >OEMS</chakra.span></Text>
 
         <Box color="white" fontFamily="Lato" marginTop="3rem">
-          <SimpleGrid columns={[1, 1, 1, 3]} spacing={10}>
-            <Card 
+          <SimpleGrid columns={3} marginBottom={10} position="relative">
+            <img src="/assets/rosettes/honorable mention rosette chip.png" alt="Award" style={{
+              position: 'absolute',
+              left: '1rem',
+              top: '1rem',
+              maxWidth: 'clamp(15rem, 20vw, 20rem)',
+              zIndex: 1
+            }} />
+            <Card
               src="/assets/poems/apathy.gif"
               title="Apathy"
-              award="honorable"
               titleSrc="/assets/titles/on apathy.png"
               onClick={() => history.push('/apathy')}
+              style={{
+                borderTopRightRadius: 0,
+                borderBottomRightRadius: 0
+              }}
             />
             <Card
               src="/assets/poems/red-child.gif"
               title="Red Child"
-              award="honorable"
               titleSrc="/assets/titles/red child.png"
               onClick={() => history.push('/red-child')}
+              style={{
+                borderRadius: 0,
+              }}
             />
             <Card
               src="/assets/poems/the-visitor.gif"
               title="The Visitor"
-              award="honorable"
               titleSrc="/assets/titles/the visitor.png" 
               onClick={() => history.push('/the-visitor')}
+              style={{
+                borderTopLeftRadius: 0,
+                borderBottomLeftRadius: 0
+              }}
             />
+          </SimpleGrid>
+          <SimpleGrid columns={[1]} spacing={10} marginBottom={10}>
             <Card
               src="/assets/poems/pahungaw.jpg"
               title="Pahungaw"
               award="special" 
               onClick={() => history.push('/')}
             />
+          </SimpleGrid>
+          <SimpleGrid columns={[1, 1, 1, 3]} spacing={10}>
             <Card
               title="Lying; Lazy Day; Man, Look Out"
               author="Franky Arrocena"
