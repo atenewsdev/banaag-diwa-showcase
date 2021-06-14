@@ -1,5 +1,5 @@
 module.exports = `<!DOCTYPE html>
-<b>"Mahal Kong Juan dela Cruz"</b><br />
+<header>"Mahal Kong Juan dela Cruz"</header><br />
 <i>ni Praise Varian</i><br />
 <br />
 Mahal kong Juan dela Cruz,<br />
@@ -32,7 +32,7 @@ Ang nanay ay mahina, aasa lamang sa panlunas<br />
 Sa pandemyang ito na itinuturing mong krus<br />
 Ako’y patuloy na aasa, nagmamahal, Pilipinas.<br />
 <br />
-<b>"Hangga’t may mga Oportunista"</b><br />
+<header>"Hangga’t may mga Oportunista"</header><br />
 <i>ni Praise Varian</i><br />
 <br />
 “Hindi mo ba nariring?”<br />
@@ -65,7 +65,7 @@ Talamak pa rin ang pandaraya<br />
 Hangga’t may mga oportunista<br />
 Ang Pilipinas ay hindi lalaya.<br />
 <br />
-<b>Alpabetong Pilipino</b><br />
+<header>Alpabetong Pilipino</header><br />
 <i>ni Praise Varian</i><br />
 <br />
 <b>A</b>nong oras na ba?<br />

@@ -44,7 +44,7 @@ const Entry = () => {
               {
                 parse(__html, {
                   replace: domNode => {
-                    if (domNode.attribs && domNode.name === 'b') {
+                    if (domNode.attribs && domNode.name === 'header') {
                       const props = attributesToProps(domNode.attribs);
                       console.log(domNode.children);
                       return (

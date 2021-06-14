@@ -1,5 +1,5 @@
 module.exports = `<!DOCTYPE html>
-<b>Grace of Pandemya</b><br />
+<header>Grace of Pandemya</header><br />
 <i>by Marie Anne Bernal </i><br />
 <br />
 A world once free and full of love<br />

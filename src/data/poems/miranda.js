@@ -1,5 +1,5 @@
 module.exports = `<!DOCTYPE html>
-<b>"Simula o katapusan"</b><br />
+<header>"Simula o katapusan"</header><br />
 <i>by Ahman Lee Miranda</i><br />
 <br />
 Masalimuot at makitid na Sulok<br />
@@ -26,7 +26,7 @@ Deritsong daan, na mahirap mapuntahan<br />
 Ala-alang sana'y muling maransan<br />
 Ngunit kaya mo bang ito'y Balikan?<br />
 <br />
-<b>Dilim</b><br />
+<header>Dilim</header><br />
 <i>by Ahman Lee Miranda</i><br />
 <br />
 Mata' y nakapikit<br />
@@ -49,7 +49,7 @@ Ayaw na matuto sa bagong mundo<br />
 Tenga'y nakatakip, laging naka idlip<br />
 Hatid ng dilim mula sa pandemic.<br />
 <br />
-<b>"Paano siya, Paano Ka, Paano Sila"</b><br />
+<header>"Paano siya, Paano Ka, Paano Sila"</header><br />
 <i>by Ahman Lee Miranda</i><br />
 <br />
 Hindi natin kagustahan ang ganitong karansan<br />

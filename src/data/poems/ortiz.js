@@ -1,5 +1,5 @@
 module.exports = `<!DOCTYPE html>
-<b>Death of a Daydreamer</b><br />
+<header>Death of a Daydreamer</header><br />
 <i>by Ronald Jay Ortiz</i><br />
 <br />
 Focus drifts and mind keeps daydreaming<br />
@@ -20,7 +20,7 @@ The fall from which, kills me everyday<br />
 What a life it is, to die inside, every time<br />
 I awake from my daydreams<br />
 <br />
-<b>Poison Marked Love</b><br />
+<header>Poison Marked Love</header><br />
 <i>by Ronald Jay Ortiz</i><br />
 <br />
 You hold out your words for the thousandth time<br />
@@ -30,7 +30,7 @@ Quench this thirst of mine with your touch sublime<br />
 For I care not of your poison marked love, happily<br />
 I will drink from it, and even drown on the last drop<br />
 <br />
-<b>Relapse</b><br />
+<header>Relapse</header><br />
 <i>by Ronald Jay Ortiz</i><br />
 <br />
 I drank and drank from my bottle of depression<br />
@@ -43,7 +43,7 @@ But then I relapse, it resets and starts all over<br />
 My addiction becomes you, and you become colder<br />
 So, I drink from my bottle of depression to get warmer<br />
 <br />
-<b>Passing</b><br />
+<header>Passing</header><br />
 <i>by Ronald Jay Ortiz</i><br />
 <br />
 The last glimpse I took<br />

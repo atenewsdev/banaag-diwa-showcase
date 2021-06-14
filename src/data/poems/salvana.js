@@ -1,5 +1,5 @@
 module.exports = `<!DOCTYPE html>
-<b>Hibernation</b><br />
+<header>Hibernation</header><br />
 <i>by Ian Salvaña</i><br />
 <br />
 I wear no brief, no boxer,<br />
@@ -29,7 +29,7 @@ I would have forgotten if I have slept, dreamt,<br />
 lost memories about me, in the long<br />
 hours predating the sun.<br />
 <br />
-<b>Self-isolation</b><br />
+<header>Self-isolation</header><br />
 <i>by Ian Salvaña</i><br />
 <br />
 <i>In mid-March 2020 Europe was declared</i><br />
@@ -55,7 +55,7 @@ people breathing. Life is still soothing, at least, until now, and maybe<br />
 until tomorrow. Silent. And yes, still I write of the bee buzzing,<br />
 completing the rhythm of some music, the final notes of this poem.<br />
 <br />
-<b>In Budapest I made it rain flowers</b><br />
+<header>In Budapest I made it rain flowers</header><br />
 <i>by Ian Salvaña</i><br />
 <br />
 February. It’s chilly and the night devours<br />
@@ -98,7 +98,7 @@ heals a heart from surgery. One night it rained<br />
 hard, and the windowpane opened, I slept<br />
 undisturbed. The next day flowers bloom.<br />
 <br />
-<b>I can finally write a poem</b><br />
+<header>I can finally write a poem</header><br />
 <i>for Natalia</i><br />
 <i>by Ian Salvaña</i><br />
 <br />

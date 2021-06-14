@@ -1,5 +1,5 @@
 module.exports = `<!DOCTYPE html>
-<b>9 MONTHS IN LIMBO</b><br />
+<header>9 MONTHS IN LIMBO</header><br />
 <i>by Daniel Carlos Tan</i><br />
 <br />
 01: Travel Time<br />

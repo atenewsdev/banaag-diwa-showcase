@@ -1,5 +1,5 @@
 module.exports = `<!DOCTYPE html>
-<b>Daily Routine</b><br />
+<header>Daily Routine</header><br />
 <i>by Frances Dane Delfin </i><br />
 <br />
 The flick of a switch turned out the lights<br />
@@ -11,7 +11,7 @@ A mind set to get things done<br />
 And like a routine, the night devours<br />
 The vulnerable in the most trying times<br />
 <br />
-<b>The Domino Effect</b><br />
+<header>The Domino Effect</header><br />
 <i>by Frances Dane Delfin </i><br />
 <br />
 To the ones behind the patients’ smiles<br />
@@ -24,7 +24,7 @@ There are no such things as small deeds<br />
 Like dominoes at play, every act of generosity<br />
 Fuels the hope in humanity<br />
 <br />
-<b>Unrest</b><br />
+<header>Unrest</header><br />
 <i>by Frances Dane Delfin </i><br />
 <br />
 Will we ever sleep so soundly?<br />

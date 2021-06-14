@@ -1,5 +1,5 @@
 module.exports = `<!DOCTYPE html>
-<b>Lying</b><br />
+<header>Lying</header><br />
 <i>by Franky Arrocena</i><br />
 <br />
 It’s loud, their voices.<br />
@@ -11,7 +11,7 @@ It’s open, to a closing.<br />
 The ceiling, it asks me -<br />
 Are you lying, or are you lying?<br />
 <br />
-<b>Lazy Day</b><br />
+<header>Lazy Day</header><br />
 <i>by Franky Arrocena</i><br />
 <br />
 It’s my lazy day but --<br />
@@ -24,7 +24,7 @@ Somewhere someone’s someone is somewhere.<br />
 Someone’s always got somewhere to be someone.<br />
 But it’s my lazy day.<br />
 <br />
-<b>Man, Look Out.</b><br />
+<header>Man, Look Out.</header><br />
 <i>by Franky Arrocena</i><br />
 <br />
 Man, there are times<br />

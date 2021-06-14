@@ -1,5 +1,5 @@
 module.exports = `<!DOCTYPE html>
-<b>Pasyal</b><br />
+<header>Pasyal</header><br />
 <i>ni Mark Renz Perez</i><br />
 <br />
 Nais ko lamang Mamasyal kina Inay Pina,<br />

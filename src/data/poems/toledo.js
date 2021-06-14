@@ -1,5 +1,5 @@
 module.exports = `<!DOCTYPE html>
-<b>Lockdown</b><br />
+<header>Lockdown</header><br />
 <i>by Miguel Angelo Francesco Toledo</i><br />
 <br />
 On the 16th of March,<br />
@@ -43,7 +43,7 @@ It feels like we’re on our own now.<br />
 As our cries and appeals fall on deaf ears,<br />
 Let it not discourage us, but to be amplifiers of tomorrow.<br />
 <br />
-<b>Protocol</b><br />
+<header>Protocol</header><br />
 <i>by Miguel Angelo Francesco Toledo</i><br />
 <br />
 Stay at home.<br />
@@ -87,7 +87,7 @@ They urged, yet how can we trust them?<br />
 With their glaring hypocrisy and proud apathy as their downfall,<br />
 Let this open our eyes to fix this broken and never-ending system.<br />
 <br />
-<b>Resilient</b><br />
+<header>Resilient</header><br />
 <i>by Miguel Angelo Francesco Toledo</i><br />
 <br />
 We are resilient<br />
@@ -115,7 +115,7 @@ There is nothing wrong with it<br />
 As long we don’t let them exploit us like an abuser’s gaslighting intent<br />
 Hold them accountable and to their citizens’ welfare they commit.<br />
 <br />
-<b>Kagaya ng Dati</b><br />
+<header>Kagaya ng Dati</header><br />
 <i>by Miguel Angelo Francesco Toledo</i><br />
 <br />
 Ilang araw, buwan, o taon ang kailangan kong hintayin<br />

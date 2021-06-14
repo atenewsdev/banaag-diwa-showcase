@@ -1,5 +1,5 @@
 module.exports = `<!DOCTYPE html>
-<b>A Tabula Rasa</b><br />
+<header>A Tabula Rasa</header><br />
 <i>by Jose Ronnie Malayo Jr.</i><br />
 <br />
 I wake up blank, but my feet move to the kitchen<br />
@@ -32,7 +32,7 @@ A world of mine has been hurled into a new phase,<br />
 Virus, virus! You will not petrify me with your sting!<br />
 And with a clean slate, I begin my story with an upraise.<br />
 <br />
-<b>Beginning of Sorrows</b><br />
+<header>Beginning of Sorrows</header><br />
 <i>by Jose Ronnie Malayo Jr.</i><br />
 <br />
 Oh, you virus spawns me stress and dolor!<br />
@@ -51,7 +51,7 @@ Slow to no internet is but adverse,<br />
 No matter how trials whack, I’m prudent.<br />
 Life’s good; lo and behold, you virus worse!<br />
 <br />
-<b>I Wish it's Au Revoir and Not Goodbye!</b><br />
+<header>I Wish it's Au Revoir and Not Goodbye!</header><br />
 <i>by Jose Ronnie Malayo Jr.</i><br />
 <br />
 This year have been a rollercoaster ride—<br />
@@ -104,7 +104,7 @@ Such a death is shocking; we cried out why!<br />
 But to everything, there is a season.<br />
 I wish it's au revoir and not goodbye!<br />
 <br />
-<b>Metamorphosis</b><br />
+<header>Metamorphosis</header><br />
 <i>by Jose Ronnie Malayo Jr.</i><br />
 <br />
 I'm topsy-turvy. What am I to bring fruition?<br />

@@ -1,5 +1,5 @@
 module.exports = `<!DOCTYPE html>
-<b>The demise of our Paradise?</b><br />
+<header>The demise of our Paradise?</header><br />
 <i>by Wilson Angelo Wang</i><br />
 <br />
 In the land full of spice and rice,<br />
