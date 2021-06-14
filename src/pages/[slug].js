@@ -11,12 +11,6 @@ const Entry = () => {
   const { slug, type } = useParams();
   let __html = null;
 
-  React.useEffect(() => {
-    if (__html !== null) {
-      console.log(__html);
-    }
-  }, [__html]);
-
   try {
     __html = require(`../data/${type}/${slug}`);
   } catch (err) {
@@ -46,7 +40,6 @@ const Entry = () => {
                   replace: domNode => {
                     if (domNode.attribs && domNode.name === 'header') {
                       const props = attributesToProps(domNode.attribs);
-                      console.log(domNode.children);
                       return (
                         <chakra.span fontFamily="PublicoText" color="#E7B089" fontSize="1.6rem" {...props}>
                           {domNode.children.map((child) => child.data)}
