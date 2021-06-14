@@ -33,7 +33,7 @@ const Entry = () => {
       </Box>
       <Box w="100%" paddingLeft="clamp(3rem, 8vw, 10rem)" paddingRight="clamp(3rem, 8vw, 10rem)" margin={0}>
         <Center>
-          <Box color="white" fontFamily="Lato" marginTop="3rem">
+          <Box color="white" fontFamily="Lato">
             <Text>
               {
                 parse(__html, {

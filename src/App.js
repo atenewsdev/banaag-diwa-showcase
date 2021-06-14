@@ -10,6 +10,7 @@ import ScrollToTop from './utils/ScrollToTop';
 import Home from './pages/home';
 import MyTitaCecilia from "./pages/my-tita-cecilia";
 import NoNotifs from './pages/no-notifs';
+import MyFamilysBarber from "./pages/my-familys-barber";
 import Apathy from './pages/apathy';
 import RedChild from './pages/red-child';
 import TheVisitor from './pages/the-visitor';
@@ -32,6 +33,9 @@ const App = () => {
         </Route>
         <Route exact path="/no-notifs">
           <NoNotifs />
+        </Route>
+        <Route exact path="/my-familys-barber">
+          <MyFamilysBarber />
         </Route>
         <Route exact path="/apathy">
           <Apathy />
