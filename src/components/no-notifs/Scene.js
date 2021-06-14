@@ -1,6 +1,8 @@
 import React from 'react';
 import { useTransition, animated } from 'react-spring';
 
+import { CDN_URL } from '../../utils/constants';
+
 const Scene = ({ section }) => {
   const [index, set] = React.useState(section);
   const transitions = useTransition(index, {
@@ -43,7 +45,7 @@ const Scene = ({ section }) => {
               position: 'fixed',
               width: '100vw',
               height: '100vh',
-              backgroundImage: `url(https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/scene${i > 9 ? i : `0${i}`}.jpg)`,
+              backgroundImage: `url(${CDN_URL}/2021/06/scene${i > 9 ? i : `0${i}`}.jpg)`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundAttachment: 'fixed',

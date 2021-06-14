@@ -1,6 +1,8 @@
 import React from 'react';
 import { useTransition, animated } from 'react-spring';
 
+import { CDN_URL } from '../../utils/constants';
+
 const Scene = ({ children, night, darken }) => {
   const [index, set] = React.useState(night || false);
   const transitions = useTransition(index, {
@@ -24,7 +26,7 @@ const Scene = ({ children, night, darken }) => {
             position: 'fixed',
             width: '100vw',
             height: '100vh',
-            backgroundImage: `url(https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/${i ? 'bg_night.jpg' : 'bg.jpg'})`,
+            backgroundImage: `url(${CDN_URL}/2021/06/${i ? 'bg_night.jpg' : 'bg.jpg'})`,
             backgroundSize: 'contain',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed',

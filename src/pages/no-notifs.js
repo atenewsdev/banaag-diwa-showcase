@@ -8,6 +8,8 @@ import preloadSounds from '../utils/preloadSounds';
 import Story from '../components/no-notifs/Story';
 import TitleScreen from '../components/no-notifs/TitleScreen';
 
+import { CDN_URL } from '../utils/constants';
+
 const Header = () => (
   <Helmet>
     <title>No Notifications, No Signal, Full Battery, 10:05 PM by Harvey Spence Kentilitisca | Banaag Diwa</title>
@@ -18,13 +20,13 @@ const Header = () => (
     <meta property="og:url" content="https://banaag-diwa.atenews.ph/no-notifs" />
     <meta property="og:title" content="No Notifications, No Signal, Full Battery, 10:05 PM by Harvey Spence Kentilitisca | Banaag Diwa" />
     <meta property="og:description" content="Harvey Spence Kentilitisca is a third-year psychology student at Ateneo de Davao University with no political affiliations inside and outside of the university. He was born and raised in Bukidnon where the setting and the struggles of this story were greatly inspired. He is acquainted  with campus journalism during his high school years and considers writing feature articles as his forte." />
-    <meta property="og:image" content="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/scene01.jpg" />
+    <meta property="og:image" content={`${CDN_URL}/2021/06/scene01.jpg`} />
 
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://banaag-diwa.atenews.ph/no-notifs" />
     <meta property="twitter:title" content="No Notifications, No Signal, Full Battery, 10:05 PM by Harvey Spence Kentilitisca | Banaag Diwa" />
     <meta property="twitter:description" content="Harvey Spence Kentilitisca is a third-year psychology student at Ateneo de Davao University with no political affiliations inside and outside of the university. He was born and raised in Bukidnon where the setting and the struggles of this story were greatly inspired. He is acquainted  with campus journalism during his high school years and considers writing feature articles as his forte." />
-    <meta property="twitter:image" content="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/scene01.jpg" />
+    <meta property="twitter:image" content={`${CDN_URL}/2021/06/scene01.jpg`} />
   </Helmet>
 );
 
@@ -38,7 +40,7 @@ const NoNotifs = () => {
   const [orientation, setOrientation] = React.useState(isLandscape() ? 'landscape' : 'portrait');
 
   React.useEffect(() => {
-    const BASEURL = 'https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06';
+    const BASEURL = `${CDN_URL}/2021/06`;
     const IMAGES = [
       `${BASEURL}/no-notifs.png`,
       `${BASEURL}/low-batt_edited.gif`,

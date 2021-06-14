@@ -6,11 +6,13 @@ import CardMedia from '@material-ui/core/CardMedia';
 
 import { Text, Center, VStack } from '@chakra-ui/react';
 
+import { CDN_URL } from '../../utils/constants';
+
 const awards = {
-  honorable: 'https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/honorable-mention-rosette-chip.png',
-  first: 'https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/1st-place-rosette-chip.png',
-  second: 'https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/2nd-place-rosette-chip.png',
-  special: 'https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/special-prize-rosette-chip.png'
+  honorable: `${CDN_URL}/2021/06/honorable-mention-rosette-chip.png`,
+  first: `${CDN_URL}/2021/06/1st-place-rosette-chip.png`,
+  second: `${CDN_URL}/2021/06/2nd-place-rosette-chip.png`,
+  special: `${CDN_URL}/2021/06/special-prize-rosette-chip.png`
 }
 
 export default function MediaCard({ src, title, author, href, award, titleSrc, maxWidth, onClick, style }) {

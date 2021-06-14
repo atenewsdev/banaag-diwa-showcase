@@ -7,6 +7,8 @@ import preloadImages from '../utils/preloadImages';
 import Story from '../components/my-tita-cecilia/Story';
 import TitleScreen from '../components/my-tita-cecilia/TitleScreen';
 
+import { CDN_URL } from '../utils/constants';
+
 const Header = () => (
   <Helmet>
     <title>My Tita Cecilia by Chaz Oyao | Banaag Diwa</title>
@@ -17,13 +19,13 @@ const Header = () => (
     <meta property="og:url" content="https://banaag-diwa.atenews.ph/my-tita-cecilia" />
     <meta property="og:title" content="My Tita Cecilia by Chaz Oyao | Banaag Diwa" />
     <meta property="og:description" content="Chaz Oyao is a 1st year AB Economics student at Ateneo de Davao University. A member of the Dadiangas  Writers Association in Gensan, he has organized creative writing workshops back in his high school days.  He is currently the Associate Editor of The Dragon Post: The Official Newsletter of the Social Sciences Cluster." />
-    <meta property="og:image" content="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/bg.jpg" />
+    <meta property="og:image" content={`${CDN_URL}/2021/06/bg.jpg`} />
 
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://banaag-diwa.atenews.ph/my-tita-cecilia" />
     <meta property="twitter:title" content="My Tita Cecilia by Chaz Oyao | Banaag Diwa" />
     <meta property="twitter:description" content="Chaz Oyao is a 1st year AB Economics student at Ateneo de Davao University. A member of the Dadiangas  Writers Association in Gensan, he has organized creative writing workshops back in his high school days.  He is currently the Associate Editor of The Dragon Post: The Official Newsletter of the Social Sciences Cluster." />
-    <meta property="twitter:image" content="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/bg.jpg" />
+    <meta property="twitter:image" content={`${CDN_URL}/2021/06/bg.jpg`} />
   </Helmet>
 );
 
@@ -35,7 +37,7 @@ const MyTitaCecilia = () => {
   const [orientation, setOrientation] = React.useState(isLandscape() ? 'landscape' : 'portrait');
 
   React.useEffect(() => {
-    const BASEURL = 'https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06';
+    const BASEURL = `${CDN_URL}/2021/06`;
     const IMAGES = [
       `${BASEURL}/my-tita-cecilia.png`,
       `${BASEURL}/bg_night.jpg`,

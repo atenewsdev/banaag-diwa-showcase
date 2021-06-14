@@ -25,7 +25,7 @@ const Entry = () => {
 
   return (
     <chakra.div backgroundColor="#233342" padding={0} margin={0} minW="100vw" minH="100vh">
-      <Box padding="3rem" marginBottom="5rem">
+      <Box padding="3rem" marginBottom="2rem">
         <Flex>
           <Center>
             <Image src="/icon-256x256.png" alt="BD" width="2rem" marginRight="1rem" />

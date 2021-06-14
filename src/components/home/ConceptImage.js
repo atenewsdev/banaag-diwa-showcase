@@ -3,9 +3,11 @@ import React from 'react';
 import { chakra } from '@chakra-ui/react';
 import { useTransition, animated } from 'react-spring';
 
+import { CDN_URL } from '../../utils/constants';
+
 const images = [
-  'https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/Concept-1.gif',
-  'https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/Concept-2.gif'
+  `${CDN_URL}/2021/06/Concept-1.gif`,
+  `${CDN_URL}/2021/06/Concept-2.gif`
 ]
 
 const ConceptImage = () => {

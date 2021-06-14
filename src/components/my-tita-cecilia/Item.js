@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Center } from '@chakra-ui/react';
 import { useTransition, animated } from 'react-spring';
 
+import { CDN_URL } from '../../utils/constants';
 
 const images = [
   'elem_1',
@@ -46,7 +47,7 @@ const Item = React.forwardRef(({ version, onLoad, selected }, ref) => {
               ...style,
               position: 'absolute',
               filter: `${selected ? 'drop-shadow(5px 5px 5px #222222)' : '' }`,
-              backgroundImage: `url(https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/${images[i]}.png)`,
+              backgroundImage: `url(${CDN_URL}/2021/06/${images[i]}.png)`,
               backgroundSize: 'contain',
               backgroundPosition: 'center',
               backgroundAttachment: 'fixed',
