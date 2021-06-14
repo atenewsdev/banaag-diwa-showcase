@@ -100,7 +100,7 @@ const Home = () => {
               title="Pahungaw"
               titleSrc={`${CDN_URL}/2021/06/pahungaw.png`}
               award="special" 
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/pahungaw')}
             />
           </SimpleGrid>
           <SimpleGrid columns={[1, 1, 1, 3]} spacing={10}>
