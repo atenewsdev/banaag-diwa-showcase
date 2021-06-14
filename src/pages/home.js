@@ -55,7 +55,7 @@ const Home = () => {
 
         <Box color="white" fontFamily="Lato" marginTop="3rem">
           <SimpleGrid columns={3} marginBottom={10} position="relative">
-            <img src="/assets/rosettes/honorable mention rosette chip.png" alt="Award" style={{
+            <img src="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/honorable-mention-rosette-chip.png" alt="Award" style={{
               position: 'absolute',
               left: '1rem',
               top: '1rem',
@@ -63,9 +63,9 @@ const Home = () => {
               zIndex: 1
             }} />
             <Card
-              src="/assets/poems/apathy.gif"
+              src="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/apathy.gif"
               title="Apathy"
-              titleSrc="/assets/titles/on apathy.png"
+              titleSrc="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/on-apathy.png"
               onClick={() => history.push('/apathy')}
               style={{
                 borderTopRightRadius: 0,
@@ -73,18 +73,18 @@ const Home = () => {
               }}
             />
             <Card
-              src="/assets/poems/red-child.gif"
+              src="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/red-child.gif"
               title="Red Child"
-              titleSrc="/assets/titles/red child.png"
+              titleSrc="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/red-child.png"
               onClick={() => history.push('/red-child')}
               style={{
                 borderRadius: 0,
               }}
             />
             <Card
-              src="/assets/poems/the-visitor.gif"
+              src="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/the-visitor.gif"
               title="The Visitor"
-              titleSrc="/assets/titles/the visitor.png" 
+              titleSrc="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/the-visitor.png" 
               onClick={() => history.push('/the-visitor')}
               style={{
                 borderTopLeftRadius: 0,
@@ -94,9 +94,9 @@ const Home = () => {
           </SimpleGrid>
           <SimpleGrid columns={[1]} spacing={10} marginBottom={10}>
             <Card
-              src="/assets/poems/pahungaw.jpg"
+              src="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/pahungaw.jpg"
               title="Pahungaw"
-              titleSrc="/assets/titles/pahungaw.png" 
+              titleSrc="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/pahungaw.png" 
               award="special" 
               onClick={() => history.push('/')}
             />
@@ -186,25 +186,25 @@ const Home = () => {
         <Box color="white" fontFamily="Lato" marginTop="3rem">
           <SimpleGrid columns={1} spacing={10} marginBottom={10}>
             <Card
-              src="/assets/my-tita-cecilia/bg.png"
+              src="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/bg.jpg"
               title="My Tita Cecilia"
               award="first"
-              titleSrc="/assets/titles/my tita cecilia.png"
+              titleSrc="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/my-tita-cecilia.png"
               onClick={() => history.push('/my-tita-cecilia')}
             />
             <Card
-              src="/assets/no-notifs/scene01.jpg"
+              src="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/scene01.jpg"
               title="No Notifs"
               award="second"
-              titleSrc="/assets/titles/no notifs.png"
+              titleSrc="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/no-notifs.png"
               maxWidth="clamp(15rem, 40vw, 40rem)" 
               onClick={() => history.push('/no-notifs')}
             />
             <Card
-              src="/assets/my-familys-barber/bg.gif"
+              src="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/bg.gif"
               title="My Family's Barber"
               award="honorable"
-              titleSrc="/assets/titles/my familys barber.png"
+              titleSrc="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/my-familys-barber.png"
               onClick={() => history.push('/my-familys-barber')}
             />
           </SimpleGrid>

@@ -4,7 +4,7 @@ import { Box, Center, Image, Text } from '@chakra-ui/react';
 const TheVisitor = () => {
   return (
     <Box
-      background="linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('/assets/poems/the-visitor.gif')"
+      background="linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/the-visitor.gif')"
       backgroundSize="cover"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
@@ -15,7 +15,7 @@ const TheVisitor = () => {
       paddingBottom="30vh"
     >
       <Center h="100vh">
-        <Image src="/assets/titles/the visitor.png" maxW="70vw" />
+        <Image src="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/the-visitor.png" maxW="70vw" />
       </Center>
       <Center>
         <Text>

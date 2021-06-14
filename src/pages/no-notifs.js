@@ -18,13 +18,13 @@ const Header = () => (
     <meta property="og:url" content="https://banaag-diwa.atenews.ph/no-notifs" />
     <meta property="og:title" content="No Notifications, No Signal, Full Battery, 10:05 PM by Harvey Spence Kentilitisca | Banaag Diwa" />
     <meta property="og:description" content="Harvey Spence Kentilitisca is a third-year psychology student at Ateneo de Davao University with no political affiliations inside and outside of the university. He was born and raised in Bukidnon where the setting and the struggles of this story were greatly inspired. He is acquainted  with campus journalism during his high school years and considers writing feature articles as his forte." />
-    <meta property="og:image" content="/assets/no-notifs/scene01.jpg" />
+    <meta property="og:image" content="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/scene01.jpg" />
 
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://banaag-diwa.atenews.ph/no-notifs" />
     <meta property="twitter:title" content="No Notifications, No Signal, Full Battery, 10:05 PM by Harvey Spence Kentilitisca | Banaag Diwa" />
     <meta property="twitter:description" content="Harvey Spence Kentilitisca is a third-year psychology student at Ateneo de Davao University with no political affiliations inside and outside of the university. He was born and raised in Bukidnon where the setting and the struggles of this story were greatly inspired. He is acquainted  with campus journalism during his high school years and considers writing feature articles as his forte." />
-    <meta property="twitter:image" content="/assets/no-notifs/scene01.jpg" />
+    <meta property="twitter:image" content="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/scene01.jpg" />
   </Helmet>
 );
 
@@ -38,10 +38,10 @@ const NoNotifs = () => {
   const [orientation, setOrientation] = React.useState(isLandscape() ? 'landscape' : 'portrait');
 
   React.useEffect(() => {
-    const BASEURL = '/assets/no-notifs';
+    const BASEURL = 'https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06';
     const IMAGES = [
-      `/assets/titles/no notifs.svg`,
-      `/assets/titles/low batt_edited.gif`,
+      `${BASEURL}/no-notifs.png`,
+      `${BASEURL}/low-batt_edited.gif`,
       `${BASEURL}/scene01.jpg`,
       `${BASEURL}/scene02.jpg`,
       `${BASEURL}/scene03.jpg`,
@@ -58,12 +58,12 @@ const NoNotifs = () => {
     ];
 
     const SOUNDS = [
-      `${BASEURL}/sfx/scene01.mp3`,
-      `${BASEURL}/sfx/scene03.mp3`,
-      `${BASEURL}/sfx/scene04.mp3`,
-      `${BASEURL}/sfx/scene06.mp3`,
-      `${BASEURL}/sfx/scene08.mp3`,
-      `${BASEURL}/sfx/scene10.mp3`,
+      `https://wp.atenews.ph/wp-content/uploads/2021/06/scene01.mp3`,
+      `https://wp.atenews.ph/wp-content/uploads/2021/06/scene03.mp3`,
+      `https://wp.atenews.ph/wp-content/uploads/2021/06/scene04.mp3`,
+      `https://wp.atenews.ph/wp-content/uploads/2021/06/scene06.mp3`,
+      `https://wp.atenews.ph/wp-content/uploads/2021/06/scene08.mp3`,
+      `https://wp.atenews.ph/wp-content/uploads/2021/06/scene10.mp3`,
     ];
     Promise.all([
       Promise.all([

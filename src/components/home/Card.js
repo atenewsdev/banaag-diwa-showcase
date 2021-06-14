@@ -7,10 +7,10 @@ import CardMedia from '@material-ui/core/CardMedia';
 import { Text, Center, VStack } from '@chakra-ui/react';
 
 const awards = {
-  honorable: '/assets/rosettes/honorable mention rosette chip.png',
-  first: '/assets/rosettes/1st place rosette chip.png',
-  second: '/assets/rosettes/2nd place rosette chip.png',
-  special: '/assets/rosettes/special prize rosette chip.png'
+  honorable: 'https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/honorable-mention-rosette-chip.png',
+  first: 'https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/1st-place-rosette-chip.png',
+  second: 'https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/2nd-place-rosette-chip.png',
+  special: 'https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/special-prize-rosette-chip.png'
 }
 
 export default function MediaCard({ src, title, author, href, award, titleSrc, maxWidth, onClick, style }) {

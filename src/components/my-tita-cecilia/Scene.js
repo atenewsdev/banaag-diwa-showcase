@@ -24,7 +24,7 @@ const Scene = ({ children, night, darken }) => {
             position: 'fixed',
             width: '100vw',
             height: '100vh',
-            backgroundImage: `url(/assets/my-tita-cecilia/${i ? 'bg_night.png' : 'bg.png'})`,
+            backgroundImage: `url(https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/${i ? 'bg_night.jpg' : 'bg.jpg'})`,
             backgroundSize: 'contain',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed',

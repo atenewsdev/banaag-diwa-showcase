@@ -4,8 +4,8 @@ import { chakra } from '@chakra-ui/react';
 import { useTransition, animated } from 'react-spring';
 
 const images = [
-  '/assets/home/Concept-1.gif',
-  '/assets/home/Concept-2.gif'
+  'https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/Concept-1.gif',
+  'https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/Concept-2.gif'
 ]
 
 const ConceptImage = () => {

@@ -4,7 +4,7 @@ import { Box, Center, Image, Text } from '@chakra-ui/react';
 const RedChild = () => {
   return (
     <Box
-      background="linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('/assets/poems/red-child.gif')"
+      background="linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/red-child.gif')"
       backgroundSize="cover"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
@@ -15,7 +15,7 @@ const RedChild = () => {
       paddingBottom="30vh"
     >
       <Center h="100vh">
-        <Image src="/assets/titles/red child.png" maxW="70vw" />
+        <Image src="https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/red-child.png" maxW="70vw" />
       </Center>
       <Center>
         <Text>

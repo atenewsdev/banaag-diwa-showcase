@@ -43,7 +43,7 @@ const Scene = ({ section }) => {
               position: 'fixed',
               width: '100vw',
               height: '100vh',
-              backgroundImage: `url(/assets/no-notifs/scene${i > 9 ? i : `0${i}`}.jpg)`,
+              backgroundImage: `url(https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/scene${i > 9 ? i : `0${i}`}.jpg)`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundAttachment: 'fixed',

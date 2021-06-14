@@ -46,7 +46,7 @@ const Item = React.forwardRef(({ version, onLoad, selected }, ref) => {
               ...style,
               position: 'absolute',
               filter: `${selected ? 'drop-shadow(5px 5px 5px #222222)' : '' }`,
-              backgroundImage: `url(/assets/my-tita-cecilia/${images[i]}.png)`,
+              backgroundImage: `url(https://cdn.statically.io/img/wp.atenews.ph/f=auto/wp-content/uploads/2021/06/${images[i]}.png)`,
               backgroundSize: 'contain',
               backgroundPosition: 'center',
               backgroundAttachment: 'fixed',
