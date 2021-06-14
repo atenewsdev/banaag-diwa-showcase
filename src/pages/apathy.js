@@ -6,15 +6,22 @@ import { CDN_URL } from '../utils/constants';
 const Apathy = () => {
   return (
     <Box
-      background={`linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('${CDN_URL}/2021/06/apathy.gif')`}
-      backgroundSize="cover"
-      backgroundPosition="center"
-      backgroundRepeat="no-repeat"
-      backgroundAttachment="fixed"
       w="100vw"
       minH="100vh"
       color="white"
       paddingBottom="30vh"
+      _before={{
+        content: '" "',
+        position: 'fixed',
+        width: '100%',
+        height: '100%',
+        top: 0,
+        left: 0,
+        background: `linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('${CDN_URL}/2021/06/apathy.gif')`,
+        backgroundSize: 'cover',
+        willChange: 'transform',
+        zIndex: -1
+      }}
     >
       <Center h="100vh">
         <Image src={`${CDN_URL}/2021/06/on-apathy.png`} maxW="70vw" />

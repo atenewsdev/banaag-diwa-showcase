@@ -10,7 +10,6 @@ const Pahungaw = () => {
       backgroundSize="cover"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
-      backgroundAttachment="fixed"
       w="100vw"
       minH="100vh"
       color="black"
