@@ -280,7 +280,7 @@ const NoNotifs = ({ sfx }) => {
         I went to my little nook and started unpacking. It turned out that my notes, despite the added  protection, were drenched enough to erase what I have written. I have no choice but to scratch  my temple and let out a faint, dissatisfied laugh. What else can I still do anyway? 
         </Text>
       </Dialog>
-      <Dialog ref={fourteenthSectionRef}>
+      <Dialog ref={fourteenthSectionRef} last>
         <Text marginBottom="1rem">
         I can only hear nothing, for the wall clock is dead now. No sound currently fills the dead air. It  has always been like this, always rolling over, staring blankly at the ceiling, and looking back at  the clock. 
         </Text>
@@ -292,11 +292,6 @@ const NoNotifs = ({ sfx }) => {
         </Text>
         <Text marginBottom="1rem">
         What a comical life I wish will end. 
-        </Text>
-      </Dialog>
-      <Dialog last>
-        <Text marginBottom="1rem">
-          Harvey Spence Kentilitisca is a third-year psychology student at Ateneo de Davao University with no political affiliations inside and outside of the university. He was born and raised in Bukidnon where the setting and the struggles of this story were greatly inspired. He is acquainted  with campus journalism during his high school years and considers writing feature articles as his forte.
         </Text>
       </Dialog>
     </>
