@@ -205,49 +205,49 @@ const Home = () => {
               title="My Family's Barber"
               award="honorable"
               titleSrc="/assets/titles/my familys barber.png"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/my-familys-barber')}
             />
           </SimpleGrid>
           <SimpleGrid columns={[1, 1, 1, 3]} spacing={10}>
             <Card 
               title="“Mahal”"
               author="Ronalyn Arangale"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/stories/mahal')}
             />
             <Card 
               title="A Remnant of War"
               author="Mae Antonnette Balili"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/stories/a-remnant-of-war')}
             />
             <Card 
               title="A Problem of Bees"
               author="Jean Sin"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/stories/a-problem-of-bees')}
             />
             <Card 
               title="Elevator Girl"
               author="Jean Sin"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/stories/elevator-girl')}
             />
             <Card 
               title="PANdummyC: A not so typical short love story of a dummy account during pandemic"
               author="dKt3k"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/stories/pandummyc')}
             />
             <Card 
               title="THE WHITE BUILDING"
               author="Sean Anthony Penn Lacorte"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/stories/the-white-building')}
             />
             <Card 
               title="“LIHAM NG PAGHAYO” "
               author="Ahman Lee Miranda"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/stories/liham-ng-paghayo')}
             />
             <Card 
               title="Ang Paboritong Halakhak ng Payasong Hilaw"
               author="Lea Kate M. Tambis"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/stories/ang-paboritong-halakhak-ng-payasong-hilaw')}
             />
           </SimpleGrid>
         </Box>

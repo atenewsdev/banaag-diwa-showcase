@@ -14,6 +14,7 @@ import Apathy from './pages/apathy';
 import RedChild from './pages/red-child';
 import TheVisitor from './pages/the-visitor';
 import Slug from './pages/[slug]';
+import Error404 from './pages/404';
 
 const App = () => {
   return (
@@ -25,26 +26,29 @@ const App = () => {
         atActive={{ opacity: 1 }}
         className="switch-wrapper"
       >
-        <Route path="/my-tita-cecilia">
+        <Route exact path="/my-tita-cecilia">
           <MyTitaCecilia />
         </Route>
-        <Route path="/no-notifs">
+        <Route exact path="/no-notifs">
           <NoNotifs />
         </Route>
-        <Route path="/apathy">
+        <Route exact path="/apathy">
           <Apathy />
         </Route>
-        <Route path="/red-child">
+        <Route exact path="/red-child">
           <RedChild />
         </Route>
-        <Route path="/the-visitor">
+        <Route exact path="/the-visitor">
           <TheVisitor />
         </Route>
-        <Route path="/:type/:slug">
+        <Route exact path="/:type/:slug">
           <Slug />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <Home />
+        </Route>
+        <Route>
+          <Error404 />
         </Route>
       </AnimatedSwitch>
     </Router>
