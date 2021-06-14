@@ -9,17 +9,17 @@ import { Text, Center, VStack } from '@chakra-ui/react';
 import { CDN_URL } from '../../utils/constants';
 
 const awards = {
-  honorable: `${CDN_URL}/2021/06/honorable-mention-rosette-chip.png`,
-  first: `${CDN_URL}/2021/06/1st-place-rosette-chip.png`,
-  second: `${CDN_URL}/2021/06/2nd-place-rosette-chip.png`,
-  special: `${CDN_URL}/2021/06/special-prize-rosette-chip.png`
+  honorable: `${CDN_URL}/2021/06/honorable-mention-laurel.png`,
+  first: `${CDN_URL}/2021/06/1st-place-laurel.png`,
+  second: `${CDN_URL}/2021/06/2nd-place-laurel.png`,
+  special: `${CDN_URL}/2021/06/special-prize-laurel.png`
 }
 
 export default function MediaCard({ src, title, author, href, award, titleSrc, maxWidth, onClick, style }) {
   if (src) {
     return (
-      <Card style={{ position: 'relative', backgroundColor: '#233342', borderColor: '#E7B089', ...style }}>
-        <CardActionArea href={href} onClick={onClick}>
+      <Card style={{ position: 'relative', backgroundColor: '#233342', borderColor: '#E7B089', height: 400, ...style }}>
+        <CardActionArea href={href} onClick={onClick} style={{ height: '100%' }}>
           { award ? (
             <img src={awards[award]} alt="Award" style={{
               position: 'absolute',
@@ -39,10 +39,10 @@ export default function MediaCard({ src, title, author, href, award, titleSrc, m
               zIndex: 1
             }} />
           ) : null }
-          <div style={{ backgroundColor: 'black' }}>
+          <div style={{ backgroundColor: 'black', height: '100%' }}>
             <CardMedia
               style={{
-                height: 400,
+                height: '100%',
                 opacity: 0.5
               }}
               image={src}

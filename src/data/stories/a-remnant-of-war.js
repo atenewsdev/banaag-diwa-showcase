@@ -84,6 +84,7 @@ did not make me wise.<br />
 Until I met you, I extend my arm, “Hi, I am Athena and I am a remnant of war.”<br />
 <br />
 <hr>
+<br />
 There’s this girl that seemed odd to me, I met her around 3 years ago when she was walking all by
 herself. Her clothes were dirty, and her face was scarred. She was holding something that looked
 like a burnt photo and was crying and shaking as if she’d been through something really tragic. She

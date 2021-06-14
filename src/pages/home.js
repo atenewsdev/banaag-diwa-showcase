@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, SimpleGrid, Flex, Image, Text, Center, VStack, chakra } from '@chakra-ui/react';
+import { Box, SimpleGrid, Flex, Image, Text, Center, VStack, chakra, useBreakpointValue } from '@chakra-ui/react';
 
 import { useHistory } from "react-router-dom";
 
@@ -11,6 +11,7 @@ import { CDN_URL } from '../utils/constants';
 
 const Home = () => {
   const history = useHistory();
+  const height = useBreakpointValue({ base: 200, md: 400 });
 
   return (
     <chakra.div backgroundColor="#233342" padding={0} margin={0} minW="100vw">
@@ -56,8 +57,8 @@ const Home = () => {
         <Text fontFamily="PublicoText" color="#E7B089" letterSpacing="1rem" fontSize="2rem">P<chakra.span fontSize="1.6rem" >OEMS</chakra.span></Text>
 
         <Box color="white" fontFamily="Lato" marginTop="3rem">
-          <SimpleGrid columns={3} marginBottom={10} position="relative">
-            <img src={`${CDN_URL}/2021/06/honorable-mention-rosette-chip.png`} alt="Award" style={{
+          <SimpleGrid columns={[1, 1, 3]} marginBottom={10} position="relative">
+            <img src={`${CDN_URL}/2021/06/honorable-mention-laurel.png`} alt="Award" style={{
               position: 'absolute',
               left: '1rem',
               top: '1rem',
@@ -71,7 +72,8 @@ const Home = () => {
               onClick={() => history.push('/apathy')}
               style={{
                 borderTopRightRadius: 0,
-                borderBottomRightRadius: 0
+                borderBottomRightRadius: 0,
+                height
               }}
             />
             <Card
@@ -81,6 +83,7 @@ const Home = () => {
               onClick={() => history.push('/red-child')}
               style={{
                 borderRadius: 0,
+                height
               }}
             />
             <Card
@@ -90,7 +93,8 @@ const Home = () => {
               onClick={() => history.push('/the-visitor')}
               style={{
                 borderTopLeftRadius: 0,
-                borderBottomLeftRadius: 0
+                borderBottomLeftRadius: 0,
+                height
               }}
             />
           </SimpleGrid>
