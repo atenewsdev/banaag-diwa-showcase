@@ -27,7 +27,7 @@ const RedChild = () => {
         <Image src={`${CDN_URL}/2021/06/red-child.png`} maxW="70vw" />
       </Center>
       <Center>
-        <Text>
+        <Text maxW="80vw">
           you taught him<br />
           to color inside the lines<br />
           sketch his paper heart<br />

@@ -19,7 +19,7 @@ const Pahungaw = () => {
         <Image src={`${CDN_URL}/2021/06/1_Pahungaw_UNA.png`} maxH="100vh" />
       </Center>
       <Center>
-        <Text>
+        <Text maxW="80vw">
           Gusto unta ko magsiniaw ba,<br/>
           Kanang husto na, kapoy mamroblema.<br/>
           Busa, pag ingon ana, maalaan ka’g elitista.<br/>
@@ -76,7 +76,7 @@ const Pahungaw = () => {
         <Image src={`${CDN_URL}/2021/06/2_Pahungaw_IKADUHA.png`} maxH="100vh" />
       </Center>
       <Center>
-        <Text>
+        <Text maxW="80vw">
           Ahak, pandemiya bai, pero wa d’yud koy kwarta,<br/>
           Bisan unsaon ug bali-bali ang bulsa,<br/>
           Sublisublion sa paglantaw ang baratuhong pitaka,<br/>
@@ -117,7 +117,7 @@ const Pahungaw = () => {
         <Image src={`${CDN_URL}/2021/06/3_Pahungaw_IKATULO.png`} maxH="100vh" />
       </Center>
       <Center>
-        <Text>
+        <Text maxW="80vw">
           Nagsugod na ang online class,<br/>
           Ang dagan sa oras kay grabe ka paspas.<br/>
           Mubaba ko sa kwarto, makikonek sa makadiyot nga panahon,<br/>
@@ -211,7 +211,7 @@ const Pahungaw = () => {
         <Image src={`${CDN_URL}/2021/06/4_Pahungaw_IKAUPAT.png`} maxH="100vh" />
       </Center>
       <Center>
-        <Text>
+        <Text maxW="80vw">
           Mibahuho sa ko’g mitiyabaw mga duha ka semana,<br/>
           Sa kwarto ko nagdrama aron way makakita,<br/>
           Mangatawa pa baya mi unya inig panihapon na.<br/>
@@ -250,7 +250,7 @@ const Pahungaw = () => {
         <Image src={`${CDN_URL}/2021/06/5_Pahungaw_IKALIMA.png`} maxH="100vh" />
       </Center>
       <Center>
-        <Text>
+        <Text maxW="80vw">
           Usa ka adlaw, naa ko sa baba.<br/>
           Ana ang kertikir sa dormitoryo sa akoa,<br/>
           Di kuno siya magpeysmas ug magpeys shild,<br/>
@@ -329,7 +329,7 @@ const Pahungaw = () => {
         <Image src={`${CDN_URL}/2021/06/6_Pahungaw_IKAUNOM.png`} maxH="100vh" />
       </Center>
       <Center>
-        <Text>
+        <Text maxW="80vw">
           Naa toy isa ka hapon.<br/>
           Gitawagan ko ug ang ingon,<br/>
           Papuy-on kuno ko sa isa ka balay,<br/>

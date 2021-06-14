@@ -27,7 +27,7 @@ const TheVisitor = () => {
         <Image src={`${CDN_URL}/2021/06/the-visitor.png`} maxW="70vw" />
       </Center>
       <Center>
-        <Text>
+        <Text maxW="80vw">
           who is this ghastly creature<br/>
           who walks with claws and fangs bared<br/>
           whose body of fallen ash<br/>

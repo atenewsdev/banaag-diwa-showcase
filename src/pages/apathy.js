@@ -27,7 +27,7 @@ const Apathy = () => {
         <Image src={`${CDN_URL}/2021/06/on-apathy.png`} maxW="70vw" />
       </Center>
       <Center>
-        <Text>
+        <Text maxW="80vw">
           must we go about unrepentant<br />
           must we go about with soft knees<br />
           idle hands and dry eyes<br />
