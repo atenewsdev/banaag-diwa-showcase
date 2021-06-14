@@ -1,4 +1,7 @@
-Lying<br />
+module.exports = `<!DOCTYPE html>
+<b>Lying</b><br />
+<i>by Franky Arrocena</i><br />
+<br />
 It’s loud, their voices.<br />
 It’s sharp, but pointless.<br />
 The walls, they’re too far –<br />
@@ -8,7 +11,9 @@ It’s open, to a closing.<br />
 The ceiling, it asks me -<br />
 Are you lying, or are you lying?<br />
 <br />
-Lazy Day<br />
+<b>Lazy Day</b><br />
+<i>by Franky Arrocena</i><br />
+<br />
 It’s my lazy day but --<br />
 Someone’s not eating, somewhere.<br />
 Someone’s lying on the stone cold ground, somewhere.<br />
@@ -19,7 +24,9 @@ Somewhere someone’s someone is somewhere.<br />
 Someone’s always got somewhere to be someone.<br />
 But it’s my lazy day.<br />
 <br />
-Man, Look Out.<br />
+<b>Man, Look Out.</b><br />
+<i>by Franky Arrocena</i><br />
+<br />
 Man, there are times<br />
 When it seems like a joke, your life.<br />
 Man, those times when<br />
@@ -36,4 +43,4 @@ Straight in the eye<br />
 If it has eyes, maybe it doesn’t.<br />
 But it’s looking at you.<br />
 At me too.<br />
-It was looking.<br />
+It was looking.<br />`;

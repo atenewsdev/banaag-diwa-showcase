@@ -13,6 +13,7 @@ import NoNotifs from './pages/no-notifs';
 import Apathy from './pages/apathy';
 import RedChild from './pages/red-child';
 import TheVisitor from './pages/the-visitor';
+import Slug from './pages/[slug]';
 
 const App = () => {
   return (
@@ -38,6 +39,9 @@ const App = () => {
         </Route>
         <Route path="/the-visitor">
           <TheVisitor />
+        </Route>
+        <Route path="/:type/:slug">
+          <Slug />
         </Route>
         <Route path="/">
           <Home />

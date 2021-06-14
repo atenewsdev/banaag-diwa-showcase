@@ -105,77 +105,77 @@ const Home = () => {
             <Card
               title="Lying; Lazy Day; Man, Look Out"
               author="Franky Arrocena"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/poems/arrocena')}
             />
             <Card
               title="Grace of Pandemya"
               author="Marie Anne Bernal"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/poems/bernal')}
             />
             <Card
               title="Daily Routine; The Domino Effect; Unrest"
               author="Frances Dane Delfin"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/poems/delfin')}
             />
             <Card
               title="Pandemic Confession; Everything Could Get Worse; Unsafe/Unsettling; Invariant"
               author="Chiarah Gulle"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/poems/gulle')}
             />
             <Card
               title="A Tabula Rasa; Beginning of Sorrows; I Wish it's Au Revoir and Not Goodbye!; Metamorphosis"
               author="Jose Ronnie Malayo Jr."
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/poems/malayo-jr')}
             />
             <Card
               title="&#x201C; Simula o katapusan &#x201C;; Dilim; &#x201C;Paano siya, Paano Ka, Paano Sila &#x201C;"
               author="Ahman Lee Miranda"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/poems/miranda')}
             />
             <Card
               title="Death of a Daydreamer; Poison Marked Love; Relapse; Passing"
               author="Ronald Jay Ortiz"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/poems/ortiz')}
             />
             <Card
               title="Pasyal"
               author="Mark Renz Perez"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/poems/perez')}
             />
             <Card
               title="Hibernation; Self-isolation; In Budapest I made it rain flowers; I can finally write a poem"
               author="Ian Salvaña"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/poems/salvana')}
             />
             <Card
               title="“PANDEMYA”"
-              author="Von Marx Secang "
-              onClick={() => history.push('/')}
+              author="Von Marx Secang"
+              onClick={() => history.push('/poems/secang')}
             />
             <Card
               title="9 MONTHS IN LIMBO"
               author="Daniel Carlos Tan"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/poems/tan')}
             />
             <Card
               title="Lockdown; Protocol; Resilient; Kagaya ng Dati"
               author="Miguel Angelo Francesco Toledo"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/poems/toledo')}
             />
             <Card
               title="Memories (2020)"
               author="Percival Cyber Vargas"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/poems/vargas')}
             />
             <Card
               title="“Mahal Kong Juan dela Cruz”; “Hangga’t may mga Oportunista”; Alpabetong Pilipino"
               author="Praise Varian"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/poems/varian')}
             />
             <Card
               title="The demise of our Paradise?"
               author="Wilson Angelo Wang"
-              onClick={() => history.push('/')}
+              onClick={() => history.push('/poems/wang')}
             />
           </SimpleGrid>
         </Box>
