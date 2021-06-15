@@ -34,7 +34,7 @@ const Entry = () => {
           </Center>
           <Spacer />
           <Center>
-            <Link fontFamily="PublicoText" color="#E7B089" letterSpacing="0.3em" onClick={() => history.goBack()}>
+            <Link fontFamily="PublicoText" color="#E7B089" letterSpacing="0.3em" onClick={() => history.push('/')}>
               &lt; B<chakra.span fontSize="0.75rem">ACK</chakra.span>
             </Link>
           </Center>
