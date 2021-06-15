@@ -15,10 +15,10 @@ const awards = {
   special: `${CDN_URL}/2021/06/special-prize-laurel.png`
 }
 
-export default function MediaCard({ src, title, author, href, award, titleSrc, maxWidth, onClick, style }) {
+export default function MediaCard({ id, src, title, author, href, award, titleSrc, maxWidth, onClick, style }) {
   if (src) {
     return (
-      <Card style={{ position: 'relative', backgroundColor: '#233342', borderColor: '#E7B089', height: 400, ...style }}>
+      <Card id={id} style={{ position: 'relative', backgroundColor: '#233342', borderColor: '#E7B089', height: 400, ...style }}>
         <CardActionArea href={href} onClick={onClick} style={{ height: '100%' }}>
           { award ? (
             <img src={awards[award]} alt="Award" style={{
@@ -55,7 +55,7 @@ export default function MediaCard({ src, title, author, href, award, titleSrc, m
   }
 
   return (
-    <Card style={{ position: 'relative', backgroundColor: '#233342', borderColor: '#E7B089', ...style }} variant="outlined">
+    <Card id={id} style={{ position: 'relative', backgroundColor: '#233342', borderColor: '#E7B089', ...style }} variant="outlined">
       <CardActionArea href={href} onClick={onClick}>
         <CardContent style={{ height: 200, width: '100%' }}>
           <Center h="100%">
