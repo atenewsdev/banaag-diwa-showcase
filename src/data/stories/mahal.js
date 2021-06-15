@@ -1,5 +1,5 @@
 module.exports = `<!DOCTYPE html>
-<header>“Mahal”</header><br />
+<header>Mahal</header><br />
 <i>ni Ronalyn Arangale </i><br />
 <br />
 Buo na ang desisyon kong huwag nang kumalas sa natutulog kong diwa, huwag igalaw

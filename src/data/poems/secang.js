@@ -1,5 +1,5 @@
 module.exports = `<!DOCTYPE html>
-<header>“PANDEMYA”</header><br />
+<header>PANDEMYA</header><br />
 <i>ni Von Marx Secang </i><br />
 <br />
 Mga matang hindi maipagkaila,<br />

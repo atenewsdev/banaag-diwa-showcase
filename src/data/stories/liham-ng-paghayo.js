@@ -1,5 +1,5 @@
 module.exports = `<!DOCTYPE html>
-<header>“LIHAM NG PAGHAYO”</header><br />
+<header>LIHAM NG PAGHAYO</header><br />
 <i>ni Ahman Lee Miranda</i><br />
 <br />
 Marso<br />

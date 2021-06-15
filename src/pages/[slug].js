@@ -2,13 +2,16 @@ import React from 'react';
 
 import parse, { attributesToProps } from 'html-react-parser';
 import {
-  useParams
+  useParams,
+  useHistory
 } from "react-router-dom";
-import { Box, Text, chakra, Flex, Center, Image } from '@chakra-ui/react';
+import { Box, Text, chakra, Flex, Spacer, Center, Image,Link } from '@chakra-ui/react';
 import Error404 from './404';
 
 const Entry = () => {
   const { slug, type } = useParams();
+  const history = useHistory();
+
   let __html = null;
 
   try {
@@ -28,6 +31,12 @@ const Entry = () => {
             <Text fontFamily="PublicoText" color="#E7B089" letterSpacing="0.3em">
               B<chakra.span fontSize="0.75rem">ANAAG</chakra.span>&nbsp;D<chakra.span fontSize="0.75rem">IWA</chakra.span>
             </Text>
+          </Center>
+          <Spacer />
+          <Center>
+            <Link fontFamily="PublicoText" color="#E7B089" letterSpacing="0.3em" onClick={() => history.goBack()}>
+              &lt; B<chakra.span fontSize="0.75rem">ACK</chakra.span>
+            </Link>
           </Center>
         </Flex>
       </Box>
