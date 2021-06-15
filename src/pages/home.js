@@ -10,12 +10,13 @@ import {
   VStack,
   chakra,
   useBreakpointValue,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
 } from '@chakra-ui/react';
+
+import { withStyles } from '@material-ui/core/styles';
+import MuiAccordion from '@material-ui/core/Accordion';
+import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
+import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
+import Typography from '@material-ui/core/Typography';
 
 import { useHistory } from "react-router-dom";
 
@@ -24,9 +25,49 @@ import Card from '../components/home/Card';
 
 import { CDN_URL } from '../utils/constants';
 
+const Accordion = withStyles({
+  root: {
+    backgroundColor: 'rgba(0, 0, 0, 0)',
+    border: '1px solid rgba(231, 176, 137, 1)',
+    borderRadius: 10,
+    color: 'white',
+    boxShadow: 'none'
+  },
+  expanded: {},
+})(MuiAccordion);
+
+const AccordionSummary = withStyles({
+  root: {
+    backgroundColor: 'rgba(0, 0, 0, 0)',
+    marginBottom: -1,
+    minHeight: 56,
+    '&$expanded': {
+      minHeight: 56,
+    },
+  },
+  content: {
+    '&$expanded': {
+      margin: '12px 0',
+    },
+  },
+  expanded: {},
+})(MuiAccordionSummary);
+
+const AccordionDetails = withStyles((theme) => ({
+  root: {
+    padding: theme.spacing(2)
+  },
+}))(MuiAccordionDetails);
+
 const Home = () => {
   const history = useHistory();
   const height = useBreakpointValue({ base: 200, md: 400 });
+
+  const [expanded, setExpanded] = React.useState('panel1');
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
 
   return (
     <chakra.div backgroundColor="#233342" padding={0} margin={0} minW="100vw">
@@ -351,120 +392,82 @@ const Home = () => {
         <Box color="white" fontFamily="Lato" marginTop="3rem">
           <SimpleGrid columns={[1, 1, 2]} spacing={10} marginBottom={10}>
             <div>
-              <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem">T<chakra.span fontSize="1.44rem" >HE EDITORS</chakra.span></Text>
-              <Accordion allowToggle marginTop={10}>
-                <AccordionItem>
-                  <h2>
-                    <AccordionButton>
-                      <Box flex="1" textAlign="left">
-                        Section 1 title
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
-                  </AccordionPanel>
-                </AccordionItem>
-
-                <AccordionItem>
-                  <h2>
-                    <AccordionButton>
-                      <Box flex="1" textAlign="left">
-                        Section 2 title
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
-                  </AccordionPanel>
-                </AccordionItem>
+              <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem" marginBottom="2rem">T<chakra.span fontSize="1.44rem" >HE EDITORS</chakra.span></Text>
+              <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+                  <Typography>Collapsible Group Item #1</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                    sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+                  </Typography>
+                </AccordionDetails>
               </Accordion>
             </div>
             <div>
-              <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem">T<chakra.span fontSize="1.44rem" >HE JUDGES</chakra.span></Text>
-              <Accordion allowToggle marginTop={10}>
-                <AccordionItem>
-                  <h2>
-                    <AccordionButton>
-                      <Box flex="1" textAlign="left">
-                        Section 1 title
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
-                  </AccordionPanel>
-                </AccordionItem>
-
-                <AccordionItem>
-                  <h2>
-                    <AccordionButton>
-                      <Box flex="1" textAlign="left">
-                        Section 2 title
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
-                  </AccordionPanel>
-                </AccordionItem>
+              <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem" marginBottom="2rem">T<chakra.span fontSize="1.44rem" >HE JUDGES</chakra.span></Text>
+              <Accordion square expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+                <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
+                  <Typography>Collapsible Group Item #2</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                    sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+                  </Typography>
+                </AccordionDetails>
               </Accordion>
             </div>
           </SimpleGrid>
 
-          <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem">T<chakra.span fontSize="1.44rem" >HE CONTRIBUTORS</chakra.span></Text>
-
-          <Accordion allowToggle marginTop={10}>
-            <AccordionItem>
-              <h2>
-                <AccordionButton>
-                  <Box flex="1" textAlign="left">
-                    Section 1 title
-                  </Box>
-                  <AccordionIcon />
-                </AccordionButton>
-              </h2>
-              <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
-              </AccordionPanel>
-            </AccordionItem>
-
-            <AccordionItem>
-              <h2>
-                <AccordionButton>
-                  <Box flex="1" textAlign="left">
-                    Section 2 title
-                  </Box>
-                  <AccordionIcon />
-                </AccordionButton>
-              </h2>
-              <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
-              </AccordionPanel>
-            </AccordionItem>
-          </Accordion>
+          <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem" marginBottom="2rem">T<chakra.span fontSize="1.44rem" >HE CONTRIBUTORS</chakra.span></Text>
+          <SimpleGrid columns={[1, 1, 2]} spacing={5} marginBottom={10}>
+            <div>
+              <Accordion square expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+                <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
+                  <Typography>Collapsible Group Item #3</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                    sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </div>
+            <div>
+              <Accordion square expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+                <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
+                  <Typography>Collapsible Group Item #4</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                    sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </div>
+            <div>
+              <Accordion square expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+                <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
+                  <Typography>Collapsible Group Item #5</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                    sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </div>
+          </SimpleGrid>
         </Box>
       </Box>
       <Box w="100%" h="20vh" />
