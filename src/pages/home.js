@@ -406,7 +406,7 @@ const Home = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography style={{ fontSize: '0.8rem', fontFamily: 'Lato' }}>
-                    {editor.bionote}
+                    {editor.bionote || 'No bionote submitted.'}
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -423,7 +423,7 @@ const Home = () => {
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography style={{ fontSize: '0.8rem', fontFamily: 'Lato' }}>
-                      {judge.bionote}
+                      {judge.bionote || 'No bionote submitted.'}
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
@@ -441,7 +441,7 @@ const Home = () => {
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography style={{ fontSize: '0.8rem', fontFamily: 'Lato' }}>
-                      {writer.bionote}
+                      {writer.bionote || 'No bionote submitted.'}
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
@@ -459,7 +459,7 @@ const Home = () => {
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography style={{ fontSize: '0.8rem', fontFamily: 'Lato' }}>
-                      {artist.bionote}
+                      {artist.bionote || 'No bionote submitted.'}
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
