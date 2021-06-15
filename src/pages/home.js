@@ -25,6 +25,13 @@ import Card from '../components/home/Card';
 
 import { CDN_URL } from '../utils/constants';
 
+import stringToSlug from '../utils/stringToSlug';
+
+import artists from '../data/contributors/artists';
+import editors from '../data/contributors/editors';
+import judges from '../data/contributors/judges';
+import writers from '../data/contributors/writers';
+
 const Accordion = withStyles({
   root: {
     backgroundColor: 'rgba(0, 0, 0, 0)',
@@ -390,83 +397,74 @@ const Home = () => {
         <Text fontFamily="PublicoText" color="#E7B089" letterSpacing="1rem" fontSize="2rem">C<chakra.span fontSize="1.6rem" >ONTRIBUTORS</chakra.span></Text>
 
         <Box color="white" fontFamily="Lato" marginTop="3rem">
-          <SimpleGrid columns={[1, 1, 2]} spacing={10} marginBottom={10}>
-            <div>
-              <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem" marginBottom="2rem">T<chakra.span fontSize="1.44rem" >HE EDITORS</chakra.span></Text>
-              <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-                  <Typography>Collapsible Group Item #1</Typography>
+          <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem" marginBottom="2rem">T<chakra.span fontSize="1.44rem" >HE EDITORS</chakra.span></Text>
+          { editors.map((editor) => (
+            <div key={`${stringToSlug(editor.name)}-editor`}>
+              <Accordion square expanded={expanded === `${stringToSlug(editor.name)}-editor`} onChange={handleChange(`${stringToSlug(editor.name)}-editor`)}>
+                <AccordionSummary aria-controls={`${stringToSlug(editor.name)}-content`} id={`${stringToSlug(editor.name)}-header`}>
+                  <Typography style={{ fontWeight: 'bold', fontSize: '1rem', fontFamily: 'Lato' }}>{editor.name}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                    sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+                  <Typography style={{ fontSize: '0.8rem', fontFamily: 'Lato' }}>
+                    {editor.bionote}
                   </Typography>
                 </AccordionDetails>
               </Accordion>
             </div>
-            <div>
-              <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem" marginBottom="2rem">T<chakra.span fontSize="1.44rem" >HE JUDGES</chakra.span></Text>
-              <Accordion square expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-                <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-                  <Typography>Collapsible Group Item #2</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                    sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-            </div>
+          )) }
+
+          <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem" marginBottom="2rem" marginTop="2rem">T<chakra.span fontSize="1.44rem" >HE JUDGES</chakra.span></Text>
+          <SimpleGrid columns={[1, 1, 2]} spacing={5} marginBottom={10}>
+            { judges.map((judge) => (
+              <div key={`${stringToSlug(judge.name)}-judge`}>
+                <Accordion square expanded={expanded === `${stringToSlug(judge.name)}-judge`} onChange={handleChange(`${stringToSlug(judge.name)}-judge`)}>
+                  <AccordionSummary aria-controls={`${stringToSlug(judge.name)}-content`} id={`${stringToSlug(judge.name)}-header`}>
+                    <Typography style={{ fontWeight: 'bold', fontSize: '1rem', fontFamily: 'Lato' }}>{judge.name}</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography style={{ fontSize: '0.8rem', fontFamily: 'Lato' }}>
+                      {judge.bionote}
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+              </div>
+            )) }
           </SimpleGrid>
 
-          <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem" marginBottom="2rem">T<chakra.span fontSize="1.44rem" >HE CONTRIBUTORS</chakra.span></Text>
+          <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem" marginBottom="2rem">T<chakra.span fontSize="1.44rem" >HE CONTRIBUTORS (WRITERS)</chakra.span></Text>
           <SimpleGrid columns={[1, 1, 2]} spacing={5} marginBottom={10}>
-            <div>
-              <Accordion square expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-                <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-                  <Typography>Collapsible Group Item #3</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                    sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-            </div>
-            <div>
-              <Accordion square expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
-                <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
-                  <Typography>Collapsible Group Item #4</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                    sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-            </div>
-            <div>
-              <Accordion square expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
-                <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
-                  <Typography>Collapsible Group Item #5</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                    sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-            </div>
+            { writers.map((writer) => (
+              <div key={`${stringToSlug(writer.name)}-writer`}>
+                <Accordion square expanded={expanded === `${stringToSlug(writer.name)}-writer`} onChange={handleChange(`${stringToSlug(writer.name)}-writer`)}>
+                  <AccordionSummary aria-controls={`${stringToSlug(writer.name)}-content`} id={`${stringToSlug(writer.name)}-header`}>
+                    <Typography style={{ fontWeight: 'bold', fontSize: '1rem', fontFamily: 'Lato' }}>{writer.name}</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography style={{ fontSize: '0.8rem', fontFamily: 'Lato' }}>
+                      {writer.bionote}
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+              </div>
+            )) }
+          </SimpleGrid>
+
+          <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem" marginBottom="2rem">T<chakra.span fontSize="1.44rem" >HE CONTRIBUTORS (ARTISTS)</chakra.span></Text>
+          <SimpleGrid columns={[1, 1, 2]} spacing={5} marginBottom={10}>
+            { artists.map((artist) => (
+              <div key={`${stringToSlug(artist.name)}-artist`}>
+                <Accordion square expanded={expanded === `${stringToSlug(artist.name)}-artist`} onChange={handleChange(`${stringToSlug(artist.name)}-artist`)}>
+                  <AccordionSummary aria-controls={`${stringToSlug(artist.name)}-content`} id={`${stringToSlug(artist.name)}-header`}>
+                    <Typography style={{ fontWeight: 'bold', fontSize: '1rem', fontFamily: 'Lato' }}>{artist.name}</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography style={{ fontSize: '0.8rem', fontFamily: 'Lato' }}>
+                      {artist.bionote}
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+              </div>
+            )) }
           </SimpleGrid>
         </Box>
       </Box>
