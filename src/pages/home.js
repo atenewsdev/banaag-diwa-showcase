@@ -122,7 +122,7 @@ const Home = () => {
             <Card
               src={`${CDN_URL}/2021/06/pahungaw.jpg`}
               title="Pahungaw"
-              titleSrc={`${CDN_URL}/2021/06/pahungaw.png`}
+              titleSrc={`${CDN_URL}/2021/06/pahungaw1.png`}
               award="special" 
               onClick={() => history.push('/pahungaw')}
             />
