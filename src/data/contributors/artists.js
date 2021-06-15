@@ -21,7 +21,7 @@ module.exports = [
   },
   {
     name: `Moammar Talib Nawang`,
-    bionote: ``
+    bionote: `Moammar T. Nawang is a 21-year-old BS in Information Technology student at Ateneo de Davao University. While his family originally hailed from the province of Sulu, Moammar found his home in Davao City and is still proud of his Tausug ethnic heritage. He is a film and tech enthusiast and loves spicy Asian food. He is also a Graphic Designer and currently a Senior Layout and Graphic Artist of Atenews. He aims to improve his craft in photo and video editing, graphic design, illustration, and motion graphics through sheer determination and self-learning.`
   },
   {
     name: `Jake Salvaleon`,

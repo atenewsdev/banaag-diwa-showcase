@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
 import {
   Box,
@@ -7,75 +7,32 @@ import {
   Image,
   Text,
   Center,
+  Spinner,
   VStack,
   chakra,
-  useBreakpointValue,
 } from '@chakra-ui/react';
 
-import { withStyles } from '@material-ui/core/styles';
-import MuiAccordion from '@material-ui/core/Accordion';
-import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
-import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
-import Typography from '@material-ui/core/Typography';
-
-import { useHistory } from "react-router-dom";
-
 import ConceptImage from '../components/home/ConceptImage';
-import Card from '../components/home/Card';
 
-import { CDN_URL } from '../utils/constants';
+const AboutTheTheme = React.lazy(() => import('../components/home/AboutTheme'));
+const Contributors = React.lazy(() => import('../components/home/Contributors'));
+const Foreword = React.lazy(() => import('../components/home/Foreword'));
+const Poems = React.lazy(() => import('../components/home/Poems'));
+const ShortStories = React.lazy(() => import('../components/home/ShortStories'));
 
-import stringToSlug from '../utils/stringToSlug';
-
-import artists from '../data/contributors/artists';
-import editors from '../data/contributors/editors';
-import judges from '../data/contributors/judges';
-import writers from '../data/contributors/writers';
-
-const Accordion = withStyles({
-  root: {
-    backgroundColor: 'rgba(0, 0, 0, 0)',
-    border: '1px solid rgba(231, 176, 137, 1)',
-    borderRadius: 10,
-    color: 'white',
-    boxShadow: 'none'
-  },
-  expanded: {},
-})(MuiAccordion);
-
-const AccordionSummary = withStyles({
-  root: {
-    backgroundColor: 'rgba(0, 0, 0, 0)',
-    marginBottom: -1,
-    minHeight: 56,
-    '&$expanded': {
-      minHeight: 56,
-    },
-  },
-  content: {
-    '&$expanded': {
-      margin: '12px 0',
-    },
-  },
-  expanded: {},
-})(MuiAccordionSummary);
-
-const AccordionDetails = withStyles((theme) => ({
-  root: {
-    padding: theme.spacing(2)
-  },
-}))(MuiAccordionDetails);
+const Loading = () => (
+  <Center w="100%">
+    <Spinner
+      thickness="4px"
+      speed="0.65s"
+      emptyColor="gray.200"
+      color="blue.500"
+      size="xl"
+    />
+  </Center>
+)
 
 const Home = () => {
-  const history = useHistory();
-  const height = useBreakpointValue({ base: 200, md: 400 });
-
-  const [expanded, setExpanded] = React.useState('panel1');
-
-  const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-  };
-
   return (
     <chakra.div backgroundColor="#233342" padding={0} margin={0} minW="100vw">
       <Box minH="100vh" w="100%" padding={0} marginBottom="3rem">
@@ -103,371 +60,21 @@ const Home = () => {
           <ConceptImage />
         </SimpleGrid>
       </Box>
-      <Box w="100%" paddingLeft="clamp(3rem, 8vw, 10rem)" paddingRight="clamp(3rem, 8vw, 10rem)" margin={0}>
-        <Text fontFamily="PublicoText" color="#E7B089" letterSpacing="1rem" fontSize="2rem">F<chakra.span fontSize="1.6rem" >OREWORD</chakra.span></Text>
-
-        <Box color="white" fontFamily="Lato" marginTop="3rem">
-          <Text>
-            How underlying systemic inequalities and injustices are uncovered is a matter between circumstance and choice. Though not mutually exclusive, the former is generally dependent on external factors predominantly out of one’s control, while the latter is contingent upon one’s action or inaction.
-          </Text>
-          <br />
-          <Text>
-            The COVID-19 pandemic has unveiled how revolting and terrifying our existing systems are—or the lack thereof. The coronavirus has not only infected and taken millions of lives but also bared how weak and helpless humankind can be when faced with an adversary as natural and as complex as a virus. 
-          </Text>
-          <br />
-          <Text>
-            Owing to this circumstance, we realize that—more than our innate incapacities—the faults in our systems have left and reduced the most vulnerable into mere numbers and cannon fodders. This made us aware of the facilities and policies our civilization already possesses and those that we still need or failed to acquire, such as the “Pandemic and All-Hazards Preparedness Act” bill which remained pending for almost a decade after its first filing back in 2013.
-          </Text>
-          <br />
-          <Text>
-            As the people struggle to respond against the outbreak, utterly unprepared and blindsided, the choice between death and survival that is readily accessible only to a few has become inevitable to some and even unavailable to many. This global tragedy is still unfolding, yet more than a year through it, only superficial solutions from our governments could be seen. Consequently, problems on top of problems have only accumulated over time. From their outright denial to their best efforts in twisting and downplaying the public health emergency—the unsettling calls for action only grew louder and longer.
-          </Text>
-          <br />
-          <Text>
-            Yet by way of choice, the demand for concrete solutions and comprehensive response from our leaders is actively voiced out in all platforms available. Hence, Atenews, as one of those platforms, advances these voices further through its annual literary folio, Banaag Diwa: Pandemya—its sincere attempt to capture and understand the downstream consequences of the current health crisis. The voices who chose to call out and expose the discontent and distress amplified by the pandemic reveals how this infectious disease is only an aspect of a larger, ongoing health crisis that has been left to take root and deliberately unnoticed for years.
-          </Text>
-          <br />
-          <Text>
-            Realities concealed amongst the intricacy of poems and exposed along the lines of fiction are altogether explored by Ateneo’s literary community whose yearning for writing persisted even in these trying times.
-          </Text>
-          <br />
-          <Text>
-            Through Banaag Diwa: Pandemya, we also come to realize that the most menacing forms of infections are not the ones that manifest physical and superficial symptoms, but rather those disguised and deep-seated. They lurk in our systems; they feed and thrive on our vulnerabilities. And only when a circumstance, or a choice, allows it—only then would they reveal their true forms and intents. Until then, they are hidden, systemic, and far-reaching, which ultimately makes them all the more daunting.
-          </Text>
-        </Box>
-      </Box>
-      <Box w="100%" marginTop="5rem" paddingLeft="clamp(3rem, 8vw, 10rem)" paddingRight="clamp(3rem, 8vw, 10rem)">
-        <Text fontFamily="PublicoText" color="#E7B089" letterSpacing="1rem" fontSize="2rem">P<chakra.span fontSize="1.6rem" >OEMS</chakra.span></Text>
-
-        <Box color="white" fontFamily="Lato" marginTop="3rem">
-          <SimpleGrid columns={[1, 1, 3]} marginBottom={10} position="relative">
-            <img src={`${CDN_URL}/2021/06/honorable-mention-laurel.png`} alt="Award" style={{
-              position: 'absolute',
-              left: '1rem',
-              top: '1rem',
-              maxWidth: 'clamp(15rem, 20vw, 20rem)',
-              zIndex: 1
-            }} />
-            <Card
-              src={`${CDN_URL}/2021/06/apathy.gif`}
-              title="Apathy"
-              titleSrc={`${CDN_URL}/2021/06/on-apathy.png`}
-              onClick={() => history.push('/apathy')}
-              style={{
-                borderTopRightRadius: 0,
-                borderBottomRightRadius: 0,
-                height
-              }}
-            />
-            <Card
-              src={`${CDN_URL}/2021/06/red-child.gif`}
-              title="Red Child"
-              titleSrc={`${CDN_URL}/2021/06/red-child.png`}
-              onClick={() => history.push('/red-child')}
-              style={{
-                borderRadius: 0,
-                height
-              }}
-            />
-            <Card
-              src={`${CDN_URL}/2021/06/the-visitor.gif`}
-              title="The Visitor"
-              titleSrc={`${CDN_URL}/2021/06/the-visitor.png`}
-              onClick={() => history.push('/the-visitor')}
-              style={{
-                borderTopLeftRadius: 0,
-                borderBottomLeftRadius: 0,
-                height
-              }}
-            />
-          </SimpleGrid>
-          <SimpleGrid columns={[1]} spacing={10} marginBottom={10}>
-            <Card
-              src={`${CDN_URL}/2021/06/pahungaw.jpg`}
-              title="Pahungaw"
-              titleSrc={`${CDN_URL}/2021/06/pahungaw1.png`}
-              award="special" 
-              onClick={() => history.push('/pahungaw')}
-            />
-          </SimpleGrid>
-          <SimpleGrid columns={[1, 1, 1, 3]} spacing={10}>
-            <Card
-              id="arrocena"
-              title="Lying; Lazy Day; Man, Look Out"
-              author="Franky Arrocena"
-              onClick={() => history.push('/poems/arrocena')}
-            />
-            <Card
-              id="bernal"
-              title="Grace of Pandemya"
-              author="Marie Anne Bernal"
-              onClick={() => history.push('/poems/bernal')}
-            />
-            <Card
-              id="delfin"
-              title="Daily Routine; The Domino Effect; Unrest"
-              author="Frances Dane Delfin"
-              onClick={() => history.push('/poems/delfin')}
-            />
-            <Card
-              id="gulle"
-              title="Pandemic Confession; Everything Could Get Worse; Unsafe/Unsettling; Invariant"
-              author="Chiarah Gulle"
-              onClick={() => history.push('/poems/gulle')}
-            />
-            <Card
-              id="malayo-jr"
-              title="A Tabula Rasa; Beginning of Sorrows; I Wish it's Au Revoir and Not Goodbye!; Metamorphosis"
-              author="Jose Ronnie Malayo Jr."
-              onClick={() => history.push('/poems/malayo-jr')}
-            />
-            <Card
-              id="miranda"
-              title="Simula o katapusan; Dilim; Paano siya, Paano Ka, Paano Sila"
-              author="Ahman Lee Miranda"
-              onClick={() => history.push('/poems/miranda')}
-            />
-            <Card
-              id="ortiz"
-              title="Death of a Daydreamer; Poison Marked Love; Relapse; Passing"
-              author="Ronald Jay Ortiz"
-              onClick={() => history.push('/poems/ortiz')}
-            />
-            <Card
-              id="perez"
-              title="Pasyal"
-              author="Mark Renz Perez"
-              onClick={() => history.push('/poems/perez')}
-            />
-            <Card
-              id="salvana"
-              title="Hibernation; Self-isolation; In Budapest I made it rain flowers; I can finally write a poem"
-              author="Ian Salvaña"
-              onClick={() => history.push('/poems/salvana')}
-            />
-            <Card
-              id="secang"
-              title="“PANDEMYA”"
-              author="Von Marx Secang"
-              onClick={() => history.push('/poems/secang')}
-            />
-            <Card
-              id="tan"
-              title="9 MONTHS IN LIMBO"
-              author="Daniel Carlos Tan"
-              onClick={() => history.push('/poems/tan')}
-            />
-            <Card
-              id="toledo"
-              title="Lockdown; Protocol; Resilient; Kagaya ng Dati"
-              author="Miguel Angelo Francesco Toledo"
-              onClick={() => history.push('/poems/toledo')}
-            />
-            <Card
-              id="vargas"
-              title="Memories (2020)"
-              author="Percival Cyber Vargas"
-              onClick={() => history.push('/poems/vargas')}
-            />
-            <Card
-              id="varian"
-              title="Mahal Kong Juan dela Cruz; Hangga’t may mga Oportunista; Alpabetong Pilipino"
-              author="Praise Varian"
-              onClick={() => history.push('/poems/varian')}
-            />
-            <Card
-              id="wang"
-              title="The demise of our Paradise?"
-              author="Wilson Angelo Wang"
-              onClick={() => history.push('/poems/wang')}
-            />
-          </SimpleGrid>
-        </Box>
-      </Box>
-      <Box w="100%" marginTop="5rem" paddingLeft="clamp(3rem, 8vw, 10rem)" paddingRight="clamp(3rem, 8vw, 10rem)">
-        <Text fontFamily="PublicoText" color="#E7B089" letterSpacing="1rem" fontSize="2rem">S<chakra.span fontSize="1.6rem" >HORT STORIES</chakra.span></Text>
-
-        <Box color="white" fontFamily="Lato" marginTop="3rem">
-          <SimpleGrid columns={1} spacing={10} marginBottom={10}>
-            <Card
-              src={`${CDN_URL}/2021/06/bg.jpg`}
-              title="My Tita Cecilia"
-              award="first"
-              titleSrc={`${CDN_URL}/2021/06/my-tita-cecilia.png`}
-              onClick={() => history.push('/my-tita-cecilia')}
-            />
-            <Card
-              src={`${CDN_URL}/2021/06/scene01.jpg`}
-              title="No Notifs"
-              award="second"
-              titleSrc={`${CDN_URL}/2021/06/no-notifs.png`}
-              maxWidth="clamp(15rem, 40vw, 40rem)" 
-              onClick={() => history.push('/no-notifs')}
-            />
-            <Card
-              src={`${CDN_URL}/2021/06/bg.gif`}
-              title="My Family's Barber"
-              award="honorable"
-              titleSrc={`${CDN_URL}/2021/06/my-familys-barber.png`}
-              onClick={() => history.push('/my-familys-barber')}
-            />
-          </SimpleGrid>
-          <SimpleGrid columns={[1, 1, 1, 3]} spacing={10}>
-            <Card
-              id="mahal"
-              title="Mahal"
-              author="Ronalyn Arangale"
-              onClick={() => history.push('/stories/mahal')}
-            />
-            <Card
-              id="a-remnant-of-war"
-              title="A Remnant of War"
-              author="Mae Antonnette Balili"
-              onClick={() => history.push('/stories/a-remnant-of-war')}
-            />
-            <Card
-              id="a-problem-of-bees"
-              title="A Problem of Bees"
-              author="Jean Sin"
-              onClick={() => history.push('/stories/a-problem-of-bees')}
-            />
-            <Card
-              id="elevator-girl"
-              title="Elevator Girl"
-              author="Jean Sin"
-              onClick={() => history.push('/stories/elevator-girl')}
-            />
-            <Card
-              id="pandummyc"
-              title="PANdummyC: A not so typical short love story of a dummy account during pandemic"
-              author="dKt3k"
-              onClick={() => history.push('/stories/pandummyc')}
-            />
-            <Card 
-              id="the-white-building"
-              title="THE WHITE BUILDING"
-              author="Sean Anthony Penn Lacorte"
-              onClick={() => history.push('/stories/the-white-building')}
-            />
-            <Card
-              id="liham-ng-paghayo"
-              title="LIHAM NG PAGHAYO"
-              author="Ahman Lee Miranda"
-              onClick={() => history.push('/stories/liham-ng-paghayo')}
-            />
-            <Card
-              id="ang-paboritong-halakhak-ng-payasong-hilaw"
-              title="Ang Paboritong Halakhak ng Payasong Hilaw"
-              author="Lea Kate M. Tambis"
-              onClick={() => history.push('/stories/ang-paboritong-halakhak-ng-payasong-hilaw')}
-            />
-          </SimpleGrid>
-        </Box>
-      </Box>
-      <Box w="100%" paddingLeft="clamp(3rem, 8vw, 10rem)" paddingRight="clamp(3rem, 8vw, 10rem)"  marginTop="5rem">
-        <Text fontFamily="PublicoText" color="#E7B089" letterSpacing="1rem" fontSize="2rem">A<chakra.span fontSize="1.6rem" >BOUT THE THEME</chakra.span></Text>
-
-        <Box color="white" fontFamily="Lato" marginTop="3rem">
-          <Text>
-            When the Atenews Editorial Board conceived the idea of Banaag Diwa Pandemya, it was still at the height of much uncertainty and fear of the novel Coronavirus back in March 2020. Classes had been suspended and later an Enhanced Community Quarantine was implemented in Davao City. For the first time, this emptied the streets of the busy metropolis, and even life itself seemed to have paused. 
-          </Text>
-          <br />
-          <Text>
-            We have to admit it was quite out of the ordinary. And something about the words ‘pandemic’ and ‘quarantine’ made us feel like we were living the science fiction novels that we used to only dream about with our peers. That was Covid-19 to us back then, a dream that we all hoped we would awaken from sooner or later. But more than a year into the pandemic, nothing has changed for the better. The dream had only become a nightmare.
-          </Text>
-          <br />
-          <Text>
-            While other countries like New Zealand and even our Asian neighbors including Singapore, Taiwan, and South Korea have flattened the curve, the Philippine situation is bleak as it is hopeless. Under pressure to please its neoliberal allies than truly alleviate the financial hardship of millions, the Philippine government rushed to reopen the economy erstwhile lacking aggressive contact tracing and testing. The welfare of hospital workers and the improvement of health facilities were eclipsed by towering attention for the police and the military, and government officials were fast to admit fatalism in the face of public ire.
-          </Text>
-          <br />
-          <Text>
-            With the advent of vaccines, our strongest and perhaps, the only chance of going back to ‘normal’, the Philippines’ third-world status subjected it to passivity as nations in the ‘developed’ world hoarded vials that were so much more than what they needed. Back home, we sat waiting for the mercy of our dodgy Chinese allies for the controversial Sinovac while our Asian neighbors locally developed their own vaccines.
-          </Text>
-          <br />
-          <Text>
-            Banaag Diwa Pandemya is thus more than just an anthology of our shared pandemic experience; it is an amalgamation of our abandoned hopes and frustrations as a community and as a people. Far from showcasing dreamy quarantine lives like we originally intended, this year’s theme bears witness to Filipinos’ long stretch of suffering in what could have been a fairly brief interlude if we were not failed by our leaders.
-          </Text>
-          <br />
-          <Text>
-            And yet, despite the danger of desensitization to violence, injustice, and death, Banaag Diwa Pandemya is here to remind us that there are human tales to every tally, human lives to every line in that ever-expanding graph. 
-          </Text>
-        </Box>
-      </Box>
-      <Box w="100%" paddingLeft="clamp(3rem, 8vw, 10rem)" paddingRight="clamp(3rem, 8vw, 10rem)"  marginTop="5rem">
-        <Text fontFamily="PublicoText" color="#E7B089" letterSpacing="1rem" fontSize="2rem">C<chakra.span fontSize="1.6rem" >ONTRIBUTORS</chakra.span></Text>
-
-        <Box color="white" fontFamily="Lato" marginTop="3rem">
-          <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem" marginBottom="2rem">T<chakra.span fontSize="1.44rem" >HE EDITORS</chakra.span></Text>
-          { editors.map((editor) => (
-            <div key={`${stringToSlug(editor.name)}-editor`}>
-              <Accordion square expanded={expanded === `${stringToSlug(editor.name)}-editor`} onChange={handleChange(`${stringToSlug(editor.name)}-editor`)}>
-                <AccordionSummary aria-controls={`${stringToSlug(editor.name)}-content`} id={`${stringToSlug(editor.name)}-header`}>
-                  <Typography style={{ fontWeight: 'bold', fontSize: '1rem', fontFamily: 'Lato' }}>{editor.name}</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography style={{ fontSize: '0.8rem', fontFamily: 'Lato' }}>
-                    {editor.bionote || 'No bionote submitted.'}
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-            </div>
-          )) }
-
-          <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem" marginBottom="2rem" marginTop="2rem">T<chakra.span fontSize="1.44rem" >HE JUDGES</chakra.span></Text>
-          <SimpleGrid columns={[1, 1, 2]} spacing={5} marginBottom={10}>
-            { judges.map((judge) => (
-              <div key={`${stringToSlug(judge.name)}-judge`}>
-                <Accordion square expanded={expanded === `${stringToSlug(judge.name)}-judge`} onChange={handleChange(`${stringToSlug(judge.name)}-judge`)}>
-                  <AccordionSummary aria-controls={`${stringToSlug(judge.name)}-content`} id={`${stringToSlug(judge.name)}-header`}>
-                    <Typography style={{ fontWeight: 'bold', fontSize: '1rem', fontFamily: 'Lato' }}>{judge.name}</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography style={{ fontSize: '0.8rem', fontFamily: 'Lato' }}>
-                      {judge.bionote || 'No bionote submitted.'}
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-              </div>
-            )) }
-          </SimpleGrid>
-
-          <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem" marginBottom="2rem">T<chakra.span fontSize="1.44rem" >HE CONTRIBUTORS (WRITERS)</chakra.span></Text>
-          <SimpleGrid columns={[1, 1, 2]} spacing={5} marginBottom={10}>
-            { writers.map((writer) => (
-              <div key={`${stringToSlug(writer.name)}-writer`}>
-                <Accordion square expanded={expanded === `${stringToSlug(writer.name)}-writer`} onChange={handleChange(`${stringToSlug(writer.name)}-writer`)}>
-                  <AccordionSummary aria-controls={`${stringToSlug(writer.name)}-content`} id={`${stringToSlug(writer.name)}-header`}>
-                    <Typography style={{ fontWeight: 'bold', fontSize: '1rem', fontFamily: 'Lato' }}>{writer.name}</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography style={{ fontSize: '0.8rem', fontFamily: 'Lato' }}>
-                      {writer.bionote || 'No bionote submitted.'}
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-              </div>
-            )) }
-          </SimpleGrid>
-
-          <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem" marginBottom="2rem">T<chakra.span fontSize="1.44rem" >HE CONTRIBUTORS (ARTISTS)</chakra.span></Text>
-          <SimpleGrid columns={[1, 1, 2]} spacing={5} marginBottom={10}>
-            { artists.map((artist) => (
-              <div key={`${stringToSlug(artist.name)}-artist`}>
-                <Accordion square expanded={expanded === `${stringToSlug(artist.name)}-artist`} onChange={handleChange(`${stringToSlug(artist.name)}-artist`)}>
-                  <AccordionSummary aria-controls={`${stringToSlug(artist.name)}-content`} id={`${stringToSlug(artist.name)}-header`}>
-                    <Typography style={{ fontWeight: 'bold', fontSize: '1rem', fontFamily: 'Lato' }}>{artist.name}</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography style={{ fontSize: '0.8rem', fontFamily: 'Lato' }}>
-                      {artist.bionote || 'No bionote submitted.'}
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-              </div>
-            )) }
-          </SimpleGrid>
-        </Box>
-      </Box>
+      <Suspense fallback={<Loading />}>
+        <Foreword />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <Poems />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <ShortStories />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <AboutTheTheme />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <Contributors />
+      </Suspense>
       <Box w="100%" h="20vh" />
     </chakra.div>
   );
