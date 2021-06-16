@@ -20,7 +20,7 @@ const Pahungaw = () => {
         <Parallax
           strength={50}
           renderLayer={(percentage) => (
-            <Image src={`${CDN_URL}/2021/06/1_Pahungaw_UNA.png`} maxH={`calc(100vh * ${percentage})`} opacity={percentage} />
+            <Image src={`${CDN_URL}/2021/06/1_Pahungaw_UNA.png`} maxH={`calc(100vh * ${percentage})`} />
           )}
         />
       </Center>
@@ -82,7 +82,12 @@ const Pahungaw = () => {
         <Parallax
           strength={50}
           renderLayer={(percentage) => (
-            <Image src={`${CDN_URL}/2021/06/2_Pahungaw_IKADUHA.png`} maxH={`calc(100vh * ${percentage})`} opacity={percentage} />
+            <div style={{ position: 'relative' }}>
+              <Image src={`${CDN_URL}/2021/06/2.png`} maxH={`100vh`} opacity={percentage} />
+              <Image src={`${CDN_URL}/2021/06/2down.png`} maxH={`100vh`} position="absolute" top="0" left={`calc(-100% + (${percentage} * 100%))`} />
+              <Image src={`${CDN_URL}/2021/06/2up.png`} maxH={`100vh`} position="absolute" top="0" left={`calc(100% - (${percentage} * 100%))`} />
+              <Image src={`${CDN_URL}/2021/06/2main.png`} maxH={`100vh`} position="absolute" top={`calc(100vh - (${percentage} * 100vh))`} left="0" />
+            </div>
           )}
         />
       </Center>
@@ -128,7 +133,12 @@ const Pahungaw = () => {
         <Parallax
           strength={50}
           renderLayer={(percentage) => (
-            <Image src={`${CDN_URL}/2021/06/3_Pahungaw_IKATULO.png`} maxH={`calc(100vh * ${percentage})`} opacity={percentage} />
+            <div style={{ position: 'relative' }}>
+              <Image src={`${CDN_URL}/2021/06/3.png`} maxH={`100vh`} opacity={percentage} />
+              <Image src={`${CDN_URL}/2021/06/3down.png`} maxH={`100vh`} position="absolute" top="0" left={`calc(-100% + (${percentage} * 100%))`} />
+              <Image src={`${CDN_URL}/2021/06/3up.png`} maxH={`100vh`} position="absolute" top="0" left={`calc(100% - (${percentage} * 100%))`} />
+              <Image src={`${CDN_URL}/2021/06/3main.png`} maxH={`100vh`} position="absolute" top={`calc(100vh - (${percentage} * 100vh))`} left="0" />
+            </div>
           )}
         />
       </Center>
@@ -227,7 +237,12 @@ const Pahungaw = () => {
         <Parallax
           strength={50}
           renderLayer={(percentage) => (
-            <Image src={`${CDN_URL}/2021/06/4_Pahungaw_IKAUPAT.png`} maxH={`calc(100vh * ${percentage})`} opacity={percentage} />
+            <div style={{ position: 'relative' }}>
+              <Image src={`${CDN_URL}/2021/06/4.png`} maxH={`100vh`} opacity={percentage} />
+              <Image src={`${CDN_URL}/2021/06/4down.png`} maxH={`100vh`} position="absolute" top="0" left={`calc(-100% + (${percentage} * 100%))`} />
+              <Image src={`${CDN_URL}/2021/06/4up.png`} maxH={`100vh`} position="absolute" top="0" left={`calc(100% - (${percentage} * 100%))`} />
+              <Image src={`${CDN_URL}/2021/06/4main.png`} maxH={`100vh`} position="absolute" top={`calc(100vh - (${percentage} * 100vh))`} left="0" />
+            </div>
           )}
         />
       </Center>
@@ -271,7 +286,12 @@ const Pahungaw = () => {
         <Parallax
           strength={50}
           renderLayer={(percentage) => (
-            <Image src={`${CDN_URL}/2021/06/5_Pahungaw_IKALIMA.png`} maxH={`calc(100vh * ${percentage})`} opacity={percentage} />
+            <div style={{ position: 'relative' }}>
+              <Image src={`${CDN_URL}/2021/06/5.png`} maxH={`100vh`} opacity={percentage} />
+              <Image src={`${CDN_URL}/2021/06/5down.png`} maxH={`100vh`} position="absolute" top="0" left={`calc(-100% + (${percentage} * 100%))`} />
+              <Image src={`${CDN_URL}/2021/06/5up.png`} maxH={`100vh`} position="absolute" top="0" left={`calc(100% - (${percentage} * 100%))`} />
+              <Image src={`${CDN_URL}/2021/06/5main.png`} maxH={`100vh`} position="absolute" top={`calc(100vh - (${percentage} * 100vh))`} left="0" />
+            </div>
           )}
         />
       </Center>
@@ -355,7 +375,12 @@ const Pahungaw = () => {
         <Parallax
           strength={50}
           renderLayer={(percentage) => (
-            <Image src={`${CDN_URL}/2021/06/6_Pahungaw_IKAUNOM.png`} maxH={`calc(100vh * ${percentage})`} opacity={percentage} />
+            <div style={{ position: 'relative' }}>
+              <Image src={`${CDN_URL}/2021/06/6.png`} maxH={`100vh`} opacity={percentage} />
+              <Image src={`${CDN_URL}/2021/06/6down.png`} maxH={`100vh`} position="absolute" top="0" left={`calc(-100% + (${percentage} * 100%))`} />
+              <Image src={`${CDN_URL}/2021/06/6up.png`} maxH={`100vh`} position="absolute" top="0" left={`calc(100% - (${percentage} * 100%))`} />
+              <Image src={`${CDN_URL}/2021/06/6main.png`} maxH={`100vh`} position="absolute" top={`calc(100vh - (${percentage} * 100vh))`} left="0" />
+            </div>
           )}
         />
       </Center>
