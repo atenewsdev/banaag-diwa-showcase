@@ -67,20 +67,22 @@ const Contributors = () => {
 
       <Box color="white" fontFamily="Lato" marginTop="3rem">
         <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem" marginBottom="2rem">T<chakra.span fontSize="1.44rem" >HE EDITORS</chakra.span></Text>
-        { editors.map((editor) => (
-          <div key={`${stringToSlug(editor.name)}-editor`}>
-            <Accordion square expanded={expanded === `${stringToSlug(editor.name)}-editor`} onChange={handleChange(`${stringToSlug(editor.name)}-editor`)}>
-              <AccordionSummary aria-controls={`${stringToSlug(editor.name)}-content`} id={`${stringToSlug(editor.name)}-header`}>
-                <Typography style={{ fontWeight: 'bold', fontSize: '1rem', fontFamily: 'Lato' }}>{editor.name}</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography style={{ fontSize: '0.8rem', fontFamily: 'Lato' }}>
-                  {editor.bionote || 'No bionote submitted.'}
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-          </div>
-        )) }
+        <SimpleGrid columns={[1, 1, 2]} spacing={5} marginBottom={10}>
+          { editors.map((editor) => (
+            <div key={`${stringToSlug(editor.name)}-editor`}>
+              <Accordion square expanded={expanded === `${stringToSlug(editor.name)}-editor`} onChange={handleChange(`${stringToSlug(editor.name)}-editor`)}>
+                <AccordionSummary aria-controls={`${stringToSlug(editor.name)}-content`} id={`${stringToSlug(editor.name)}-header`}>
+                  <Typography style={{ fontWeight: 'bold', fontSize: '1rem', fontFamily: 'Lato' }}>{editor.name}</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography style={{ fontSize: '0.8rem', fontFamily: 'Lato' }}>
+                    {editor.bionote}
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </div>
+          )) }
+        </SimpleGrid>
 
         <Text fontFamily="PublicoText" color="#E7B089" fontSize="1.8rem" marginBottom="2rem" marginTop="2rem">T<chakra.span fontSize="1.44rem" >HE JUDGES</chakra.span></Text>
         <SimpleGrid columns={[1, 1, 2]} spacing={5} marginBottom={10}>
@@ -92,7 +94,7 @@ const Contributors = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography style={{ fontSize: '0.8rem', fontFamily: 'Lato' }}>
-                    {judge.bionote || 'No bionote submitted.'}
+                    {judge.bionote}
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -110,7 +112,7 @@ const Contributors = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography style={{ fontSize: '0.8rem', fontFamily: 'Lato' }}>
-                    {writer.bionote || 'No bionote submitted.'}
+                    {writer.bionote}
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -128,7 +130,7 @@ const Contributors = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography style={{ fontSize: '0.8rem', fontFamily: 'Lato' }}>
-                    {artist.bionote || 'No bionote submitted.'}
+                    {artist.bionote}
                   </Typography>
                 </AccordionDetails>
               </Accordion>

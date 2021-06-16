@@ -130,7 +130,7 @@ const Poems = () => {
           />
           <Card
             id="secang"
-            title="“PANDEMYA”"
+            title="PANDEMYA"
             author="Von Marx Secang"
             onClick={() => history.push('/poems/secang')}
           />

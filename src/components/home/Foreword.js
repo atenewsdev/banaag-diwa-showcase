@@ -39,6 +39,12 @@ const Foreword = () => {
         <Text>
           Through Banaag Diwa: Pandemya, we also come to realize that the most menacing forms of infections are not the ones that manifest physical and superficial symptoms, but rather those disguised and deep-seated. They lurk in our systems; they feed and thrive on our vulnerabilities. And only when a circumstance, or a choice, allows it—only then would they reveal their true forms and intents. Until then, they are hidden, systemic, and far-reaching, which ultimately makes them all the more daunting.
         </Text>
+        <br />
+        <Text marginTop="3rem">
+          Julien Jame Apale<br />
+          Atenews Editor-in-Chief, 2019-2020<br />
+          June 2021<br />
+        </Text>
       </Box>
     </Box>
   );

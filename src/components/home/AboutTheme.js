@@ -36,6 +36,12 @@ const Foreword = () => {
         <Text>
           And yet, despite the danger of desensitization to violence, injustice, and death, Banaag Diwa Pandemya is here to remind us that there are human tales to every tally, human lives to every line in that ever-expanding graph. 
         </Text>
+        <br />
+        <Text marginTop="3rem">
+          Gwyneth Marie Vasquez<br />
+          Atenews Editor-in-Chief, 2020-2021<br />
+          June 2021<br />
+        </Text>
       </Box>
     </Box>
   );

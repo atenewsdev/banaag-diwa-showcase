@@ -43,7 +43,6 @@ const Routes = () => {
     }
     // else scroll to id
     else {
-      console.log(hash);
       setTimeout(() => {
         const id = hash.replace('#', '');
         const element = document.getElementById(id);

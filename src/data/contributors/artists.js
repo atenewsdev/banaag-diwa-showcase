@@ -9,11 +9,11 @@ module.exports = [
   },
   {
     name: `Joeshua Dequiña`,
-    bionote: ``
+    bionote: `Formerly an “isko” at the University of the Philippines Diliman, Joeshua Dequiña is now a 3rd-year Electrical Engineering student at Ateneo de Davao University. He is currently a web designer for Atenews, Ateneo de Davao Research in Information Systems and Software Engineering Laboratory (ARISEN Lab), and SAMAHAN Department of Systems Development (SysDev). He is usually quiet in person but quite the opposite online.`
   },
   {
     name: `Sean Anthony Penn Lacorte`,
-    bionote: ``
+    bionote: `Is a second year AB Anthropology student. Currently makes illustrations and tries to make comics. He also is fond of squishing cats.`
   },
   {
     name: `Joseph Nasser`,
@@ -25,7 +25,7 @@ module.exports = [
   },
   {
     name: `Jake Salvaleon`,
-    bionote: ``
+    bionote: `Jake G. Salvaleon is a student taking up BS Chemical Engineering at Ateneo de Davao University. Currently a Junior Layout and Graphic Artist of Atenews, he started his craft by making movie posters from random photos he had on his computer. He takes inspiration from magazines, films, and album art of some artists.`
   },
   {
     name: `Raphael Eddmon Tiu`,
