@@ -11,8 +11,9 @@ import {
   VStack,
   chakra,
 } from '@chakra-ui/react';
-
+import { ChevronDownIcon } from '@chakra-ui/icons'
 import ConceptImage from '../components/home/ConceptImage';
+import '../main.css';
 
 const AboutTheTheme = React.lazy(() => import('../components/home/AboutTheme'));
 const Contributors = React.lazy(() => import('../components/home/Contributors'));
@@ -55,7 +56,7 @@ const Home = () => {
         <meta property="twitter:image" content="%PUBLIC_URL%/preview.jpg" />
       </Helmet>
       <chakra.div backgroundColor="#233342" padding={0} margin={0} minW="100vw">
-        <Box minH="100vh" w="100%" padding={0} marginBottom="3rem">
+        <Box minH="100vh" w="100%" padding={0} marginBottom="3rem" position="relative">
           <Box padding="3rem" marginBottom="5rem">
             <Flex>
               <Center>
@@ -68,7 +69,7 @@ const Home = () => {
               </Center>
             </Flex>
           </Box>
-          <SimpleGrid spacing="3rem" minChildWidth="360px">
+          <SimpleGrid spacing="3rem" minChildWidth="360px" marginBottom="2rem">
             <Box fontFamily="PublicoText" color="#FFFFFF">
               <Center h="100%" w="100%">
                 <VStack spacing="2rem">
@@ -79,6 +80,11 @@ const Home = () => {
             </Box>
             <ConceptImage />
           </SimpleGrid>
+          <Box position="absolute" bottom={0} left={0} right={0}>
+            <div class="arrow bounce">
+              <ChevronDownIcon boxSize={12} />
+            </div>
+          </Box>
         </Box>
         <Suspense fallback={<Loading />}>
           <Foreword />
