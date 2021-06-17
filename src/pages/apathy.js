@@ -1,9 +1,11 @@
 import React from 'react';
-import { Box, Center, Image, Text } from '@chakra-ui/react';
+import { useHistory } from 'react-router';
+import { Box, Center, Image, Text, Button } from '@chakra-ui/react';
 
 import { CDN_URL } from '../utils/constants';
 
 const Apathy = () => {
+  const history = useHistory();
   return (
     <Box
       w="100vw"
@@ -42,6 +44,11 @@ const Apathy = () => {
           like a slow<br />
           stroll in the park.<br />
         </Text>
+      </Center>
+      <Center marginTop="4rem">
+        <Button colorScheme="blackAlpha" variant="ghost" color="white" onClick={() => history.push('/#apathy')}>
+          &lt;&lt;&nbsp;Back to Home
+        </Button>
       </Center>
     </Box>
   );

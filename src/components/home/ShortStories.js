@@ -22,6 +22,7 @@ const ShortStories = () => {
       <Box color="white" fontFamily="Lato" marginTop="3rem">
         <SimpleGrid columns={1} spacing={10} marginBottom={10}>
           <Card
+            id="my-tita-cecilia"
             src={`${CDN_URL}/2021/06/bg.jpg`}
             title="My Tita Cecilia"
             award="first"
@@ -29,6 +30,7 @@ const ShortStories = () => {
             onClick={() => history.push('/my-tita-cecilia')}
           />
           <Card
+            id="no-notifs"
             src={`${CDN_URL}/2021/06/scene01.jpg`}
             title="No Notifs"
             award="second"
@@ -37,6 +39,7 @@ const ShortStories = () => {
             onClick={() => history.push('/no-notifs')}
           />
           <Card
+            id="my-familys-barber"
             src={`${CDN_URL}/2021/06/bg.gif`}
             title="My Family's Barber"
             award="honorable"

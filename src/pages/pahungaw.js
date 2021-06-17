@@ -1,10 +1,12 @@
 import React from 'react';
-import { Box, Center, Image, Text } from '@chakra-ui/react';
+import { Box, Center, Image, Text, Button } from '@chakra-ui/react';
 import { Parallax } from "react-parallax";
+import { useHistory } from 'react-router';
 
 import { CDN_URL } from '../utils/constants';
 
 const Pahungaw = () => {
+  const history = useHistory();
   return (
     <Box
       background={`linear-gradient(rgba(217,217,217,1), rgba(236,236,236,1))`}
@@ -446,6 +448,11 @@ const Pahungaw = () => {
           Sama sa pahungaw, puwede daw silang pahungawan,<br/>
           Pero sila tong nagapadungog-dungog diay na gusto magpahungaw.<br/><br/>
         </Text>
+      </Center>
+      <Center marginTop="4rem">
+        <Button colorScheme="gray" variant="ghost" color="black" onClick={() => history.push('/#pahungaw')}>
+          &lt;&lt;&nbsp;Back to Home
+        </Button>
       </Center>
     </Box>
   );

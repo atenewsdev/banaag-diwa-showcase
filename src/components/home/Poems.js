@@ -32,6 +32,7 @@ const Poems = () => {
             zIndex: 1
           }} />
           <Card
+            id="apathy"
             src={`${CDN_URL}/2021/06/apathy.gif`}
             title="Apathy"
             titleSrc={`${CDN_URL}/2021/06/on-apathy.png`}
@@ -43,6 +44,7 @@ const Poems = () => {
             }}
           />
           <Card
+            id="red-child"
             src={`${CDN_URL}/2021/06/red-child.gif`}
             title="Red Child"
             titleSrc={`${CDN_URL}/2021/06/red-child.png`}
@@ -53,6 +55,7 @@ const Poems = () => {
             }}
           />
           <Card
+            id="the-visitor"
             src={`${CDN_URL}/2021/06/the-visitor.gif`}
             title="The Visitor"
             titleSrc={`${CDN_URL}/2021/06/the-visitor.png`}
@@ -66,6 +69,7 @@ const Poems = () => {
         </SimpleGrid>
         <SimpleGrid columns={[1]} spacing={10} marginBottom={10}>
           <Card
+            id="pahungaw"
             src={`${CDN_URL}/2021/06/pahungaw.jpg`}
             title="Pahungaw"
             titleSrc={`${CDN_URL}/2021/06/pahungaw1.png`}

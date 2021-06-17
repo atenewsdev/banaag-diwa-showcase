@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Flex, Spacer } from '@chakra-ui/react';
 
-const Dialog = ({ children, margin, onMouseEnter, onMouseLeave, left }) => {
+const Dialog = ({ children, margin, onMouseEnter, onMouseLeave, left, onClick }) => {
 
   const BaseBox = () => (
     <Box
@@ -17,10 +17,12 @@ const Dialog = ({ children, margin, onMouseEnter, onMouseLeave, left }) => {
       textAlign={`${left ? 'left' : 'right'}`}
       textShadow="3px 3px 3px #000000"
       _hover={{
-        filter: 'drop-shadow(5px 5px 5px #000000)'
+        filter: 'drop-shadow(5px 5px 5px #000000)',
+        cursor: onClick ? 'pointer' : ''
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
+      onClick={onClick}
     >
       {children}
     </Box>

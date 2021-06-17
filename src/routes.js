@@ -46,7 +46,6 @@ const Routes = () => {
       setTimeout(() => {
         const id = hash.replace('#', '');
         const element = document.getElementById(id);
-        console.log(id);
         if (element) {
           element.scrollIntoView();
         }

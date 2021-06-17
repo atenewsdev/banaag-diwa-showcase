@@ -20,6 +20,7 @@ const Contributors = React.lazy(() => import('../components/home/Contributors'))
 const Foreword = React.lazy(() => import('../components/home/Foreword'));
 const Poems = React.lazy(() => import('../components/home/Poems'));
 const ShortStories = React.lazy(() => import('../components/home/ShortStories'));
+const Footer = React.lazy(() => import('../components/home/Footer'));
 
 const Loading = () => (
   <Center w="100%">
@@ -101,7 +102,7 @@ const Home = () => {
         <Suspense fallback={<Loading />}>
           <Contributors />
         </Suspense>
-        <Box w="100%" h="20vh" />
+        <Footer />
       </chakra.div>
     </>
   );

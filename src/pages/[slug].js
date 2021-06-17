@@ -5,7 +5,7 @@ import {
   useParams,
   useHistory
 } from "react-router-dom";
-import { Box, Text, chakra, Flex, Spacer, Center, Image,Link } from '@chakra-ui/react';
+import { Box, Text, chakra, Flex, Spacer, Center, Image, Link, Button } from '@chakra-ui/react';
 import Error404 from './404';
 
 const Entry = () => {
@@ -62,7 +62,11 @@ const Entry = () => {
           </Box>
         </Center>
       </Box>
-      
+      <Center marginTop="4rem">
+        <Button colorScheme="blackAlpha" variant="ghost" color="white" onClick={() => history.push(`/#${slug}`)}>
+          &lt;&lt;&nbsp;Back to Home
+        </Button>
+      </Center>
       <Box w="100%" h="20vh" />
     </chakra.div>
   )

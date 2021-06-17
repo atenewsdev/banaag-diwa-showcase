@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
 
-const Dialog = React.forwardRef(({ children, last, onMouseEnter, onMouseLeave }, ref) => {
+const Dialog = React.forwardRef(({ children, last, onMouseEnter, onMouseLeave, onClick }, ref) => {
 
   return (
     <Box marginBottom={last ? "20vh" : "100vh"}>
@@ -17,10 +17,12 @@ const Dialog = React.forwardRef(({ children, last, onMouseEnter, onMouseLeave },
         textAlign='left'
         textShadow="3px 3px 3px #000000"
         _hover={{
-          filter: 'drop-shadow(5px 5px 5px #000000)'
+          filter: 'drop-shadow(5px 5px 5px #000000)',
+          cursor: onClick ? 'pointer' : ''
         }}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
+        onClick={onClick}
         ref={ref}
       >
         {children}

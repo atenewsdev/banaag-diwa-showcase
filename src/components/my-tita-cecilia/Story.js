@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Text, Fade } from '@chakra-ui/react';
-
+import { useHistory } from 'react-router';
 import { useInView } from 'react-intersection-observer';
 
 import Scene from './Scene';
@@ -10,6 +10,7 @@ import Dialog from './Dialog';
 
 const MyTitaCecilia = () => {
   const ref = React.useRef();
+  const history = useHistory();
 
   const [firstSectionRef, firstSectionInView] = useInView({
     threshold: 0,
@@ -588,6 +589,14 @@ const MyTitaCecilia = () => {
           <Dialog>
             <Text>
             And we were back to the usual silence. 
+            </Text>
+          </Dialog>
+        </div>
+
+        <div style={{ marginTop: '100vh', marginBottom: '10rem' }}>
+          <Dialog onClick={() => history.push('/#my-tita-cecilia')}>
+            <Text>
+              &lt;&lt;&nbsp;Back to Home
             </Text>
           </Dialog>
         </div>

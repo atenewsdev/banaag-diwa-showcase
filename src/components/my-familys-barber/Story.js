@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Text, Fade } from '@chakra-ui/react';
-
+import { useHistory } from 'react-router';
 import { useInView } from 'react-intersection-observer';
 
 import Scene from './Scene';
@@ -10,6 +10,7 @@ import Dialog from './Dialog';
 
 const MyFamilysBarber = () => {
   const ref = React.useRef();
+  const history = useHistory();
 
   const [firstSectionRef, firstSectionInView] = useInView({
     threshold: 0,
@@ -379,6 +380,14 @@ const MyFamilysBarber = () => {
               miles away, still playing the Beatles. One of the children fell from his bike and a frantic mother
               came rushing to treat the wound. Meanwhile, my family’s barber began to cut through layers of
               hair as I sat mid-drowse, watching the dark trimmings of the past drift peacefully with the wind.
+            </Text>
+          </Dialog>
+        </div>
+
+        <div style={{ marginTop: '100vh', marginBottom: '50vh' }}>
+          <Dialog onClick={() => history.push('/#my-familys-barber')}>
+            <Text>
+              &lt;&lt;&nbsp;Back to Home
             </Text>
           </Dialog>
         </div>

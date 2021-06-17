@@ -1,9 +1,12 @@
 import React from 'react';
-import { Box, Center, Image, Text } from '@chakra-ui/react';
+import { useHistory } from 'react-router';
+import { Box, Center, Image, Text, Button } from '@chakra-ui/react';
 
 import { CDN_URL } from '../utils/constants';
 
 const RedChild = () => {
+  const history = useHistory();
+
   return (
     <Box
       w="100vw"
@@ -39,6 +42,11 @@ const RedChild = () => {
           that his sun is a square<br />
           tell me, will it shine less?<br />
         </Text>
+      </Center>
+      <Center marginTop="4rem">
+        <Button colorScheme="blackAlpha" variant="ghost" color="white" onClick={() => history.push('/#red-child')}>
+          &lt;&lt;&nbsp;Back to Home
+        </Button>
       </Center>
     </Box>
   );

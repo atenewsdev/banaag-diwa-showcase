@@ -1,9 +1,11 @@
 import React from 'react';
-import { Box, Center, Image, Text } from '@chakra-ui/react';
+import { useHistory } from 'react-router';
+import { Box, Center, Image, Text, Button } from '@chakra-ui/react';
 
 import { CDN_URL } from '../utils/constants';
 
 const TheVisitor = () => {
+  const history = useHistory();
   return (
     <Box
       w="100vw"
@@ -69,6 +71,11 @@ const TheVisitor = () => {
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body crucified<br/>
           forever on this bed.<br/>
         </Text>
+      </Center>
+      <Center marginTop="4rem">
+        <Button colorScheme="blackAlpha" variant="ghost" color="white" onClick={() => history.push('/#the-visitor')}>
+          &lt;&lt;&nbsp;Back to Home
+        </Button>
       </Center>
     </Box>
   );

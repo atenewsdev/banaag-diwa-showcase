@@ -1,13 +1,15 @@
 import React from 'react';
 
 import { Text } from '@chakra-ui/react';
-
+import { useHistory } from 'react-router';
 import { useInView } from 'react-intersection-observer';
 
 import Scene from './Scene';
 import Dialog from './Dialog';
 
 const NoNotifs = ({ sfx }) => {
+  const history = useHistory();
+
   const [firstSectionRef, firstSectionInView] = useInView({
     threshold: 0,
   });
@@ -280,7 +282,7 @@ const NoNotifs = ({ sfx }) => {
         I went to my little nook and started unpacking. It turned out that my notes, despite the added  protection, were drenched enough to erase what I have written. I have no choice but to scratch  my temple and let out a faint, dissatisfied laugh. What else can I still do anyway? 
         </Text>
       </Dialog>
-      <Dialog ref={fourteenthSectionRef} last>
+      <Dialog ref={fourteenthSectionRef}>
         <Text marginBottom="1rem">
         I can only hear nothing, for the wall clock is dead now. No sound currently fills the dead air. It  has always been like this, always rolling over, staring blankly at the ceiling, and looking back at  the clock. 
         </Text>
@@ -292,6 +294,11 @@ const NoNotifs = ({ sfx }) => {
         </Text>
         <Text marginBottom="1rem">
         What a comical life I wish will end. 
+        </Text>
+      </Dialog>
+      <Dialog onClick={() => history.push('/#no-notifs')} last>
+        <Text>
+          &lt;&lt;&nbsp;Back to Home
         </Text>
       </Dialog>
     </>
