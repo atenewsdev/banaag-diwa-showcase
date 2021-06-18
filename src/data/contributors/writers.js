@@ -5,7 +5,7 @@ module.exports = [
   },
   {
     name: `Franky Arrocena`,
-    bionote: ``
+    bionote: `Andrei Francis 'Franky' C. Arrocena is a 21 years old Magna Cum Laude graduate of Interdisciplinary Studies Minor in Media and Technology from Ateneo de Davao University, he is an acclaimed award winning filmmaker especially in his locality. He has been the recipient of numerous local, national and international awards such as Best Director, Best Screenplay Writer, Best Film, among others. He is also a published short-story fiction writer and a musical composer and scorer, which are featured in his films. Franky dedicates his art and craft in uplifting the rich culture, history, and the stories of his locality, Davao City.`
   },
   {
     name: `Marie Anne Bernal`,
