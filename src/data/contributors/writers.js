@@ -41,11 +41,11 @@ module.exports = [
   },
   {
     name: `Ronald Jay Ortiz`,
-    bionote: ``
+    bionote: `A boy with messed up hair, living in a messed up life, with a messed up heart and mind, Ronald is currently struggling as a law student. He graduated BS Business Management from Ateneo de Davao University last 2019 and was a feature writer of Atenews.`
   },
   {
     name: `Mark Renz Perez`,
-    bionote: ``
+    bionote: `Mark Renz D. Perez is a BS Civil Engineering Student who was born from  Tandag city, Surigao del Sur. He likes to write poems, watch anime and social impact films. Plus, he loves his dog named Yoshi.`
   },
   {
     name: `Ian Salvaña`,
