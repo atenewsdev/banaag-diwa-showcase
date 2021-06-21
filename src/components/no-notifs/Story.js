@@ -189,7 +189,7 @@ const NoNotifs = ({ sfx }) => {
           I immediately wore my white camisa de chino while I gazed at the window as the sunrise hit me. Seeing my father already riding our carabao as it plowed the field, I went outside to nourish the  remaining livestock that we have. As I checked the animal feeds, I noticed that it would only last  until tomorrow. That calls for another cost aside from the batteries at the end of the day. 
         </Text>
         <Text marginBottom="1rem">
-          “Nak, palihug ko ug dala  to the little storage room  partitioned with old knick-knacks and bamboos and gave him what he favored. As he opened  the sack, a mixed feeling struck within me as soon as I saw what was inside. Regardless, I figured out we will plant palay today, so I left my phone hanging onto a nearby tree and rolled up my  sleeves. This morning will be a long one for me, indeed. 
+          “Nak, palihug ko ug dala atong sako sa likod," he called from afar. I went to the little storage room  partitioned with old knick-knacks and bamboos and gave him what he favored. As he opened  the sack, a mixed feeling struck within me as soon as I saw what was inside. Regardless, I figured out we will plant palay today, so I left my phone hanging onto a nearby tree and rolled up my  sleeves. This morning will be a long one for me, indeed. 
         </Text>
       </Dialog>
       <Dialog ref={fifthSectionRef}>
